@@ -133,7 +133,7 @@ function Hero() {
           <span><BrainCircuit size={14} /></span> 多模态因子研究 · 风险约束决策
         </motion.div>
         <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}>
-          面向非平稳市场，<br /><span>多模态量化研究。</span>
+          AI量化交易<br /><span>预测系统</span>
         </motion.h1>
         <motion.p initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }}>
           将价量结构、风险因子与财经语义映射为可解释、可回溯、可检验的研究信号，<br className="desktop-only" />并以信息边界和不确定性度量约束结论强度。
