@@ -1,0 +1,4540 @@
+{
+  "meta": {
+    "product": "NEXUS Alpha",
+    "generatedAt": "2026-07-20T11:17:16+08:00",
+    "dataSource": "AKShare / 东方财富公开行情与资讯",
+    "mode": "离线可复现研究快照"
+  },
+  "market": [
+    {
+      "id": "CSI300",
+      "symbol": "sh000300",
+      "name": "沪深300",
+      "code": "000300.SH",
+      "price": 4529.1,
+      "change": -0.036,
+      "change20": -0.0835,
+      "asOf": "2026-07-17"
+    },
+    {
+      "id": "SSE",
+      "symbol": "sh000001",
+      "name": "上证指数",
+      "code": "000001.SH",
+      "price": 3764.16,
+      "change": -0.0305,
+      "change20": -0.0798,
+      "asOf": "2026-07-17"
+    },
+    {
+      "id": "CSI500",
+      "symbol": "sh000905",
+      "name": "中证500",
+      "code": "000905.SH",
+      "price": 7513.76,
+      "change": -0.0555,
+      "change20": -0.1337,
+      "asOf": "2026-07-17"
+    },
+    {
+      "id": "CHINEXT",
+      "symbol": "sz399006",
+      "name": "创业板指",
+      "code": "399006.SZ",
+      "price": 3428.63,
+      "change": -0.0715,
+      "change20": -0.1937,
+      "asOf": "2026-07-17"
+    }
+  ],
+  "signal": {
+    "assetId": "CSI300",
+    "action": "观望",
+    "probability": 0.5094,
+    "confidence": 54,
+    "horizon": "未来5个交易日",
+    "sentimentScore": 0.162,
+    "riskGate": "正常",
+    "targetLow": 4415.87,
+    "targetHigh": 4687.61
+  },
+  "chart": [
+    {
+      "date": "12-03",
+      "full_date": "2025-12-03",
+      "close": 4531.05,
+      "ma20": null,
+      "volume": 169.76
+    },
+    {
+      "date": "12-04",
+      "full_date": "2025-12-04",
+      "close": 4546.57,
+      "ma20": null,
+      "volume": 147.2
+    },
+    {
+      "date": "12-05",
+      "full_date": "2025-12-05",
+      "close": 4584.54,
+      "ma20": null,
+      "volume": 196.8
+    },
+    {
+      "date": "12-08",
+      "full_date": "2025-12-08",
+      "close": 4621.76,
+      "ma20": null,
+      "volume": 199.62
+    },
+    {
+      "date": "12-09",
+      "full_date": "2025-12-09",
+      "close": 4598.22,
+      "ma20": null,
+      "volume": 184.16
+    },
+    {
+      "date": "12-10",
+      "full_date": "2025-12-10",
+      "close": 4591.83,
+      "ma20": null,
+      "volume": 169.11
+    },
+    {
+      "date": "12-11",
+      "full_date": "2025-12-11",
+      "close": 4552.19,
+      "ma20": null,
+      "volume": 168.42
+    },
+    {
+      "date": "12-12",
+      "full_date": "2025-12-12",
+      "close": 4580.95,
+      "ma20": null,
+      "volume": 212.83
+    },
+    {
+      "date": "12-15",
+      "full_date": "2025-12-15",
+      "close": 4552.06,
+      "ma20": null,
+      "volume": 167.59
+    },
+    {
+      "date": "12-16",
+      "full_date": "2025-12-16",
+      "close": 4497.56,
+      "ma20": null,
+      "volume": 165.17
+    },
+    {
+      "date": "12-17",
+      "full_date": "2025-12-17",
+      "close": 4579.88,
+      "ma20": null,
+      "volume": 178.42
+    },
+    {
+      "date": "12-18",
+      "full_date": "2025-12-18",
+      "close": 4552.79,
+      "ma20": null,
+      "volume": 151.68
+    },
+    {
+      "date": "12-19",
+      "full_date": "2025-12-19",
+      "close": 4568.18,
+      "ma20": null,
+      "volume": 154.88
+    },
+    {
+      "date": "12-22",
+      "full_date": "2025-12-22",
+      "close": 4611.62,
+      "ma20": null,
+      "volume": 165.25
+    },
+    {
+      "date": "12-23",
+      "full_date": "2025-12-23",
+      "close": 4620.73,
+      "ma20": null,
+      "volume": 169.26
+    },
+    {
+      "date": "12-24",
+      "full_date": "2025-12-24",
+      "close": 4634.06,
+      "ma20": null,
+      "volume": 153.71
+    },
+    {
+      "date": "12-25",
+      "full_date": "2025-12-25",
+      "close": 4642.54,
+      "ma20": null,
+      "volume": 139.43
+    },
+    {
+      "date": "12-26",
+      "full_date": "2025-12-26",
+      "close": 4657.24,
+      "ma20": null,
+      "volume": 175.4
+    },
+    {
+      "date": "12-29",
+      "full_date": "2025-12-29",
+      "close": 4639.37,
+      "ma20": null,
+      "volume": 200.4
+    },
+    {
+      "date": "12-30",
+      "full_date": "2025-12-30",
+      "close": 4651.28,
+      "ma20": 4590.72,
+      "volume": 180.37
+    },
+    {
+      "date": "12-31",
+      "full_date": "2025-12-31",
+      "close": 4629.94,
+      "ma20": 4595.66,
+      "volume": 170.76
+    },
+    {
+      "date": "01-05",
+      "full_date": "2026-01-05",
+      "close": 4717.75,
+      "ma20": 4604.22,
+      "volume": 234.14
+    },
+    {
+      "date": "01-06",
+      "full_date": "2026-01-06",
+      "close": 4790.69,
+      "ma20": 4614.53,
+      "volume": 296.97
+    },
+    {
+      "date": "01-07",
+      "full_date": "2026-01-07",
+      "close": 4776.67,
+      "ma20": 4622.28,
+      "volume": 259.1
+    },
+    {
+      "date": "01-08",
+      "full_date": "2026-01-08",
+      "close": 4737.65,
+      "ma20": 4629.25,
+      "volume": 238.8
+    },
+    {
+      "date": "01-09",
+      "full_date": "2026-01-09",
+      "close": 4758.92,
+      "ma20": 4637.6,
+      "volume": 254.69
+    },
+    {
+      "date": "01-12",
+      "full_date": "2026-01-12",
+      "close": 4789.92,
+      "ma20": 4649.49,
+      "volume": 294.83
+    },
+    {
+      "date": "01-13",
+      "full_date": "2026-01-13",
+      "close": 4761.03,
+      "ma20": 4658.49,
+      "volume": 301.45
+    },
+    {
+      "date": "01-14",
+      "full_date": "2026-01-14",
+      "close": 4741.93,
+      "ma20": 4667.99,
+      "volume": 364.95
+    },
+    {
+      "date": "01-15",
+      "full_date": "2026-01-15",
+      "close": 4751.43,
+      "ma20": 4680.68,
+      "volume": 254.0
+    },
+    {
+      "date": "01-16",
+      "full_date": "2026-01-16",
+      "close": 4731.87,
+      "ma20": 4688.28,
+      "volume": 325.28
+    },
+    {
+      "date": "01-19",
+      "full_date": "2026-01-19",
+      "close": 4734.46,
+      "ma20": 4697.36,
+      "volume": 267.61
+    },
+    {
+      "date": "01-20",
+      "full_date": "2026-01-20",
+      "close": 4718.88,
+      "ma20": 4704.9,
+      "volume": 282.72
+    },
+    {
+      "date": "01-21",
+      "full_date": "2026-01-21",
+      "close": 4723.07,
+      "ma20": 4710.47,
+      "volume": 266.35
+    },
+    {
+      "date": "01-22",
+      "full_date": "2026-01-22",
+      "close": 4723.71,
+      "ma20": 4715.62,
+      "volume": 274.2
+    },
+    {
+      "date": "01-23",
+      "full_date": "2026-01-23",
+      "close": 4702.5,
+      "ma20": 4719.04,
+      "volume": 314.64
+    },
+    {
+      "date": "01-26",
+      "full_date": "2026-01-26",
+      "close": 4706.96,
+      "ma20": 4722.26,
+      "volume": 363.0
+    },
+    {
+      "date": "01-27",
+      "full_date": "2026-01-27",
+      "close": 4705.69,
+      "ma20": 4724.69,
+      "volume": 301.48
+    },
+    {
+      "date": "01-28",
+      "full_date": "2026-01-28",
+      "close": 4717.99,
+      "ma20": 4728.62,
+      "volume": 382.26
+    },
+    {
+      "date": "01-29",
+      "full_date": "2026-01-29",
+      "close": 4753.87,
+      "ma20": 4733.75,
+      "volume": 415.51
+    },
+    {
+      "date": "01-30",
+      "full_date": "2026-01-30",
+      "close": 4706.34,
+      "ma20": 4737.57,
+      "volume": 319.79
+    },
+    {
+      "date": "02-02",
+      "full_date": "2026-02-02",
+      "close": 4605.98,
+      "ma20": 4731.98,
+      "volume": 304.77
+    },
+    {
+      "date": "02-03",
+      "full_date": "2026-02-03",
+      "close": 4660.11,
+      "ma20": 4725.45,
+      "volume": 265.55
+    },
+    {
+      "date": "02-04",
+      "full_date": "2026-02-04",
+      "close": 4698.68,
+      "ma20": 4721.55,
+      "volume": 264.88
+    },
+    {
+      "date": "02-05",
+      "full_date": "2026-02-05",
+      "close": 4670.42,
+      "ma20": 4718.19,
+      "volume": 237.86
+    },
+    {
+      "date": "02-06",
+      "full_date": "2026-02-06",
+      "close": 4643.6,
+      "ma20": 4712.42,
+      "volume": 202.72
+    },
+    {
+      "date": "02-09",
+      "full_date": "2026-02-09",
+      "close": 4719.06,
+      "ma20": 4708.88,
+      "volume": 207.25
+    },
+    {
+      "date": "02-10",
+      "full_date": "2026-02-10",
+      "close": 4724.3,
+      "ma20": 4707.04,
+      "volume": 187.0
+    },
+    {
+      "date": "02-11",
+      "full_date": "2026-02-11",
+      "close": 4713.82,
+      "ma20": 4705.64,
+      "volume": 173.39
+    },
+    {
+      "date": "02-12",
+      "full_date": "2026-02-12",
+      "close": 4719.58,
+      "ma20": 4704.04,
+      "volume": 197.84
+    },
+    {
+      "date": "02-13",
+      "full_date": "2026-02-13",
+      "close": 4660.41,
+      "ma20": 4700.47,
+      "volume": 189.17
+    },
+    {
+      "date": "02-24",
+      "full_date": "2026-02-24",
+      "close": 4707.54,
+      "ma20": 4699.12,
+      "volume": 218.49
+    },
+    {
+      "date": "02-25",
+      "full_date": "2026-02-25",
+      "close": 4735.89,
+      "ma20": 4699.98,
+      "volume": 284.27
+    },
+    {
+      "date": "02-26",
+      "full_date": "2026-02-26",
+      "close": 4726.87,
+      "ma20": 4700.17,
+      "volume": 234.85
+    },
+    {
+      "date": "02-27",
+      "full_date": "2026-02-27",
+      "close": 4710.65,
+      "ma20": 4699.51,
+      "volume": 261.42
+    },
+    {
+      "date": "03-02",
+      "full_date": "2026-03-02",
+      "close": 4728.67,
+      "ma20": 4700.82,
+      "volume": 349.26
+    },
+    {
+      "date": "03-03",
+      "full_date": "2026-03-03",
+      "close": 4655.9,
+      "ma20": 4698.27,
+      "volume": 370.62
+    },
+    {
+      "date": "03-04",
+      "full_date": "2026-03-04",
+      "close": 4602.62,
+      "ma20": 4693.11,
+      "volume": 303.04
+    },
+    {
+      "date": "03-05",
+      "full_date": "2026-03-05",
+      "close": 4647.69,
+      "ma20": 4689.6,
+      "volume": 259.32
+    },
+    {
+      "date": "03-06",
+      "full_date": "2026-03-06",
+      "close": 4660.44,
+      "ma20": 4684.93,
+      "volume": 238.53
+    },
+    {
+      "date": "03-09",
+      "full_date": "2026-03-09",
+      "close": 4615.45,
+      "ma20": 4680.38,
+      "volume": 322.79
+    },
+    {
+      "date": "03-10",
+      "full_date": "2026-03-10",
+      "close": 4674.76,
+      "ma20": 4683.82,
+      "volume": 263.9
+    },
+    {
+      "date": "03-11",
+      "full_date": "2026-03-11",
+      "close": 4704.5,
+      "ma20": 4686.04,
+      "volume": 270.18
+    },
+    {
+      "date": "03-12",
+      "full_date": "2026-03-12",
+      "close": 4687.56,
+      "ma20": 4685.49,
+      "volume": 302.99
+    },
+    {
+      "date": "03-13",
+      "full_date": "2026-03-13",
+      "close": 4669.14,
+      "ma20": 4685.42,
+      "volume": 310.77
+    },
+    {
+      "date": "03-16",
+      "full_date": "2026-03-16",
+      "close": 4671.56,
+      "ma20": 4686.82,
+      "volume": 296.22
+    },
+    {
+      "date": "03-17",
+      "full_date": "2026-03-17",
+      "close": 4637.44,
+      "ma20": 4682.74,
+      "volume": 263.02
+    },
+    {
+      "date": "03-18",
+      "full_date": "2026-03-18",
+      "close": 4658.33,
+      "ma20": 4679.44,
+      "volume": 234.69
+    },
+    {
+      "date": "03-19",
+      "full_date": "2026-03-19",
+      "close": 4583.25,
+      "ma20": 4672.91,
+      "volume": 254.13
+    },
+    {
+      "date": "03-20",
+      "full_date": "2026-03-20",
+      "close": 4567.02,
+      "ma20": 4665.28,
+      "volume": 257.87
+    },
+    {
+      "date": "03-23",
+      "full_date": "2026-03-23",
+      "close": 4418.0,
+      "ma20": 4653.16,
+      "volume": 328.08
+    },
+    {
+      "date": "03-24",
+      "full_date": "2026-03-24",
+      "close": 4474.72,
+      "ma20": 4641.52,
+      "volume": 255.53
+    },
+    {
+      "date": "03-25",
+      "full_date": "2026-03-25",
+      "close": 4537.47,
+      "ma20": 4631.6,
+      "volume": 262.64
+    },
+    {
+      "date": "03-26",
+      "full_date": "2026-03-26",
+      "close": 4477.53,
+      "ma20": 4619.13,
+      "volume": 213.74
+    },
+    {
+      "date": "03-27",
+      "full_date": "2026-03-27",
+      "close": 4502.57,
+      "ma20": 4608.73,
+      "volume": 192.4
+    },
+    {
+      "date": "03-30",
+      "full_date": "2026-03-30",
+      "close": 4491.95,
+      "ma20": 4596.89,
+      "volume": 209.29
+    },
+    {
+      "date": "03-31",
+      "full_date": "2026-03-31",
+      "close": 4450.05,
+      "ma20": 4586.6,
+      "volume": 224.54
+    },
+    {
+      "date": "04-01",
+      "full_date": "2026-04-01",
+      "close": 4526.07,
+      "ma20": 4582.77,
+      "volume": 216.48
+    },
+    {
+      "date": "04-02",
+      "full_date": "2026-04-02",
+      "close": 4478.91,
+      "ma20": 4574.34,
+      "volume": 190.99
+    },
+    {
+      "date": "04-03",
+      "full_date": "2026-04-03",
+      "close": 4440.79,
+      "ma20": 4563.35,
+      "volume": 168.32
+    },
+    {
+      "date": "04-07",
+      "full_date": "2026-04-07",
+      "close": 4440.62,
+      "ma20": 4554.61,
+      "volume": 162.64
+    },
+    {
+      "date": "04-08",
+      "full_date": "2026-04-08",
+      "close": 4595.56,
+      "ma20": 4550.65,
+      "volume": 253.34
+    },
+    {
+      "date": "04-09",
+      "full_date": "2026-04-09",
+      "close": 4566.22,
+      "ma20": 4543.74,
+      "volume": 184.94
+    },
+    {
+      "date": "04-10",
+      "full_date": "2026-04-10",
+      "close": 4636.57,
+      "ma20": 4541.19,
+      "volume": 208.68
+    },
+    {
+      "date": "04-13",
+      "full_date": "2026-04-13",
+      "close": 4646.15,
+      "ma20": 4540.04,
+      "volume": 196.71
+    },
+    {
+      "date": "04-14",
+      "full_date": "2026-04-14",
+      "close": 4701.28,
+      "ma20": 4541.52,
+      "volume": 204.7
+    },
+    {
+      "date": "04-15",
+      "full_date": "2026-04-15",
+      "close": 4685.25,
+      "ma20": 4543.92,
+      "volume": 201.69
+    },
+    {
+      "date": "04-16",
+      "full_date": "2026-04-16",
+      "close": 4736.61,
+      "ma20": 4547.83,
+      "volume": 192.06
+    },
+    {
+      "date": "04-17",
+      "full_date": "2026-04-17",
+      "close": 4728.67,
+      "ma20": 4555.1,
+      "volume": 182.92
+    },
+    {
+      "date": "04-20",
+      "full_date": "2026-04-20",
+      "close": 4757.44,
+      "ma20": 4564.62,
+      "volume": 221.63
+    },
+    {
+      "date": "04-21",
+      "full_date": "2026-04-21",
+      "close": 4768.0,
+      "ma20": 4582.12,
+      "volume": 205.61
+    },
+    {
+      "date": "04-22",
+      "full_date": "2026-04-22",
+      "close": 4799.63,
+      "ma20": 4598.37,
+      "volume": 204.48
+    },
+    {
+      "date": "04-23",
+      "full_date": "2026-04-23",
+      "close": 4786.33,
+      "ma20": 4610.81,
+      "volume": 232.87
+    },
+    {
+      "date": "04-24",
+      "full_date": "2026-04-24",
+      "close": 4769.37,
+      "ma20": 4625.4,
+      "volume": 193.8
+    },
+    {
+      "date": "04-27",
+      "full_date": "2026-04-27",
+      "close": 4770.95,
+      "ma20": 4638.82,
+      "volume": 192.8
+    },
+    {
+      "date": "04-28",
+      "full_date": "2026-04-28",
+      "close": 4758.21,
+      "ma20": 4652.13,
+      "volume": 216.72
+    },
+    {
+      "date": "04-29",
+      "full_date": "2026-04-29",
+      "close": 4810.35,
+      "ma20": 4670.15,
+      "volume": 233.3
+    },
+    {
+      "date": "04-30",
+      "full_date": "2026-04-30",
+      "close": 4807.31,
+      "ma20": 4684.21,
+      "volume": 250.63
+    },
+    {
+      "date": "05-06",
+      "full_date": "2026-05-06",
+      "close": 4877.09,
+      "ma20": 4704.12,
+      "volume": 274.44
+    },
+    {
+      "date": "05-07",
+      "full_date": "2026-05-07",
+      "close": 4900.51,
+      "ma20": 4727.11,
+      "volume": 257.83
+    },
+    {
+      "date": "05-08",
+      "full_date": "2026-05-08",
+      "close": 4871.91,
+      "ma20": 4748.67,
+      "volume": 251.72
+    },
+    {
+      "date": "05-11",
+      "full_date": "2026-05-11",
+      "close": 4951.84,
+      "ma20": 4766.48,
+      "volume": 305.73
+    },
+    {
+      "date": "05-12",
+      "full_date": "2026-05-12",
+      "close": 4948.05,
+      "ma20": 4785.58,
+      "volume": 273.81
+    },
+    {
+      "date": "05-13",
+      "full_date": "2026-05-13",
+      "close": 4998.34,
+      "ma20": 4803.66,
+      "volume": 268.45
+    },
+    {
+      "date": "05-14",
+      "full_date": "2026-05-14",
+      "close": 4914.6,
+      "ma20": 4817.09,
+      "volume": 280.7
+    },
+    {
+      "date": "05-15",
+      "full_date": "2026-05-15",
+      "close": 4859.59,
+      "ma20": 4825.0,
+      "volume": 276.97
+    },
+    {
+      "date": "05-18",
+      "full_date": "2026-05-18",
+      "close": 4833.52,
+      "ma20": 4832.42,
+      "volume": 239.08
+    },
+    {
+      "date": "05-19",
+      "full_date": "2026-05-19",
+      "close": 4852.88,
+      "ma20": 4838.23,
+      "volume": 232.28
+    },
+    {
+      "date": "05-20",
+      "full_date": "2026-05-20",
+      "close": 4850.7,
+      "ma20": 4844.33,
+      "volume": 220.02
+    },
+    {
+      "date": "05-21",
+      "full_date": "2026-05-21",
+      "close": 4783.1,
+      "ma20": 4845.61,
+      "volume": 287.34
+    },
+    {
+      "date": "05-22",
+      "full_date": "2026-05-22",
+      "close": 4845.1,
+      "ma20": 4849.47,
+      "volume": 286.94
+    },
+    {
+      "date": "05-25",
+      "full_date": "2026-05-25",
+      "close": 4921.6,
+      "ma20": 4855.57,
+      "volume": 264.74
+    },
+    {
+      "date": "05-26",
+      "full_date": "2026-05-26",
+      "close": 4947.85,
+      "ma20": 4863.64,
+      "volume": 302.8
+    },
+    {
+      "date": "05-27",
+      "full_date": "2026-05-27",
+      "close": 4908.17,
+      "ma20": 4870.58,
+      "volume": 301.71
+    },
+    {
+      "date": "05-28",
+      "full_date": "2026-05-28",
+      "close": 4914.21,
+      "ma20": 4877.75,
+      "volume": 267.43
+    },
+    {
+      "date": "05-29",
+      "full_date": "2026-05-29",
+      "close": 4892.12,
+      "ma20": 4884.44,
+      "volume": 332.52
+    },
+    {
+      "date": "06-01",
+      "full_date": "2026-06-01",
+      "close": 4844.26,
+      "ma20": 4886.14,
+      "volume": 296.13
+    },
+    {
+      "date": "06-02",
+      "full_date": "2026-06-02",
+      "close": 4914.56,
+      "ma20": 4891.5,
+      "volume": 281.73
+    },
+    {
+      "date": "06-03",
+      "full_date": "2026-06-03",
+      "close": 4938.81,
+      "ma20": 4894.59,
+      "volume": 304.04
+    },
+    {
+      "date": "06-04",
+      "full_date": "2026-06-04",
+      "close": 4904.74,
+      "ma20": 4894.8,
+      "volume": 264.81
+    },
+    {
+      "date": "06-05",
+      "full_date": "2026-06-05",
+      "close": 4816.92,
+      "ma20": 4892.05,
+      "volume": 301.93
+    },
+    {
+      "date": "06-08",
+      "full_date": "2026-06-08",
+      "close": 4713.64,
+      "ma20": 4880.14,
+      "volume": 299.65
+    },
+    {
+      "date": "06-09",
+      "full_date": "2026-06-09",
+      "close": 4801.81,
+      "ma20": 4872.83,
+      "volume": 258.39
+    },
+    {
+      "date": "06-10",
+      "full_date": "2026-06-10",
+      "close": 4748.59,
+      "ma20": 4860.34,
+      "volume": 259.3
+    },
+    {
+      "date": "06-11",
+      "full_date": "2026-06-11",
+      "close": 4722.41,
+      "ma20": 4850.73,
+      "volume": 247.18
+    },
+    {
+      "date": "06-12",
+      "full_date": "2026-06-12",
+      "close": 4777.32,
+      "ma20": 4846.62,
+      "volume": 335.92
+    },
+    {
+      "date": "06-15",
+      "full_date": "2026-06-15",
+      "close": 4891.71,
+      "ma20": 4849.53,
+      "volume": 331.32
+    },
+    {
+      "date": "06-16",
+      "full_date": "2026-06-16",
+      "close": 4884.23,
+      "ma20": 4851.09,
+      "volume": 282.58
+    },
+    {
+      "date": "06-17",
+      "full_date": "2026-06-17",
+      "close": 4931.39,
+      "ma20": 4855.13,
+      "volume": 276.05
+    },
+    {
+      "date": "06-18",
+      "full_date": "2026-06-18",
+      "close": 4941.6,
+      "ma20": 4863.05,
+      "volume": 334.46
+    },
+    {
+      "date": "06-22",
+      "full_date": "2026-06-22",
+      "close": 5059.66,
+      "ma20": 4873.78,
+      "volume": 375.1
+    },
+    {
+      "date": "06-23",
+      "full_date": "2026-06-23",
+      "close": 4919.39,
+      "ma20": 4873.67,
+      "volume": 342.72
+    },
+    {
+      "date": "06-24",
+      "full_date": "2026-06-24",
+      "close": 4943.02,
+      "ma20": 4873.43,
+      "volume": 312.25
+    },
+    {
+      "date": "06-25",
+      "full_date": "2026-06-25",
+      "close": 5020.1,
+      "ma20": 4879.02,
+      "volume": 346.66
+    },
+    {
+      "date": "06-26",
+      "full_date": "2026-06-26",
+      "close": 4868.22,
+      "ma20": 4876.73,
+      "volume": 341.18
+    },
+    {
+      "date": "06-29",
+      "full_date": "2026-06-29",
+      "close": 4926.92,
+      "ma20": 4878.47,
+      "volume": 323.22
+    },
+    {
+      "date": "06-30",
+      "full_date": "2026-06-30",
+      "close": 4979.43,
+      "ma20": 4885.22,
+      "volume": 306.15
+    },
+    {
+      "date": "07-01",
+      "full_date": "2026-07-01",
+      "close": 4958.98,
+      "ma20": 4887.44,
+      "volume": 342.93
+    },
+    {
+      "date": "07-02",
+      "full_date": "2026-07-02",
+      "close": 4812.3,
+      "ma20": 4881.12,
+      "volume": 343.24
+    },
+    {
+      "date": "07-03",
+      "full_date": "2026-07-03",
+      "close": 4842.17,
+      "ma20": 4877.99,
+      "volume": 301.07
+    },
+    {
+      "date": "07-06",
+      "full_date": "2026-07-06",
+      "close": 4842.0,
+      "ma20": 4879.24,
+      "volume": 294.05
+    },
+    {
+      "date": "07-07",
+      "full_date": "2026-07-07",
+      "close": 4792.26,
+      "ma20": 4883.18,
+      "volume": 246.31
+    },
+    {
+      "date": "07-08",
+      "full_date": "2026-07-08",
+      "close": 4755.53,
+      "ma20": 4880.86,
+      "volume": 243.93
+    },
+    {
+      "date": "07-09",
+      "full_date": "2026-07-09",
+      "close": 4876.31,
+      "ma20": 4887.25,
+      "volume": 281.63
+    },
+    {
+      "date": "07-10",
+      "full_date": "2026-07-10",
+      "close": 4780.79,
+      "ma20": 4890.17,
+      "volume": 304.13
+    },
+    {
+      "date": "07-13",
+      "full_date": "2026-07-13",
+      "close": 4695.38,
+      "ma20": 4886.07,
+      "volume": 278.63
+    },
+    {
+      "date": "07-14",
+      "full_date": "2026-07-14",
+      "close": 4796.5,
+      "ma20": 4881.31,
+      "volume": 283.25
+    },
+    {
+      "date": "07-15",
+      "full_date": "2026-07-15",
+      "close": 4786.78,
+      "ma20": 4876.44,
+      "volume": 278.69
+    },
+    {
+      "date": "07-16",
+      "full_date": "2026-07-16",
+      "close": 4698.43,
+      "ma20": 4864.79,
+      "volume": 251.56
+    },
+    {
+      "date": "07-17",
+      "full_date": "2026-07-17",
+      "close": 4529.1,
+      "ma20": 4844.16,
+      "volume": 302.63
+    },
+    {
+      "date": "07-20",
+      "full_date": "2026-07-20",
+      "forecast": 4529.62,
+      "upper": 4640.75,
+      "lower": 4418.49
+    },
+    {
+      "date": "07-21",
+      "full_date": "2026-07-21",
+      "forecast": 4530.15,
+      "upper": 4687.31,
+      "lower": 4372.99
+    },
+    {
+      "date": "07-22",
+      "full_date": "2026-07-22",
+      "forecast": 4530.67,
+      "upper": 4723.15,
+      "lower": 4338.19
+    },
+    {
+      "date": "07-23",
+      "full_date": "2026-07-23",
+      "forecast": 4531.2,
+      "upper": 4753.45,
+      "lower": 4308.94
+    },
+    {
+      "date": "07-24",
+      "full_date": "2026-07-24",
+      "forecast": 4531.72,
+      "upper": 4780.21,
+      "lower": 4283.23
+    }
+  ],
+  "model": {
+    "name": "RF-MultiFactor v1.0",
+    "horizon_days": 5,
+    "train_samples": 3657,
+    "test_samples": 1568,
+    "test_auc": 0.4698,
+    "test_accuracy": 0.5,
+    "latest_probability": 0.5094,
+    "feature_importance": [
+      {
+        "key": "ret_20",
+        "label": "20日动量",
+        "importance": 0.184,
+        "direction": -0.0835
+      },
+      {
+        "key": "volatility_20",
+        "label": "波动率",
+        "importance": 0.1793,
+        "direction": 0.3043
+      },
+      {
+        "key": "atr_14",
+        "label": "真实波幅",
+        "importance": 0.1509,
+        "direction": 0.0247
+      },
+      {
+        "key": "ma_gap_60",
+        "label": "中期趋势",
+        "importance": 0.1507,
+        "direction": -0.0663
+      },
+      {
+        "key": "macd",
+        "label": "MACD 趋势",
+        "importance": 0.0902,
+        "direction": -0.0116
+      },
+      {
+        "key": "volume_z",
+        "label": "量能异常",
+        "importance": 0.0881,
+        "direction": -0.0066
+      },
+      {
+        "key": "ret_5",
+        "label": "5日动量",
+        "importance": 0.0556,
+        "direction": -0.0526
+      },
+      {
+        "key": "rsi_14",
+        "label": "RSI 强弱",
+        "importance": 0.0513,
+        "direction": 0.3024
+      },
+      {
+        "key": "ma_gap_20",
+        "label": "均线偏离",
+        "importance": 0.0497,
+        "direction": -0.065
+      }
+    ]
+  },
+  "backtest": {
+    "metrics": {
+      "total_return": 0.0626,
+      "benchmark_return": 0.1507,
+      "annualized_return": 0.0098,
+      "annualized_volatility": 0.0929,
+      "sharpe": 0.1513,
+      "max_drawdown": -0.135,
+      "win_rate": 0.4921,
+      "exposure": 0.1607,
+      "trades": 36
+    },
+    "curve": [
+      {
+        "date": "2020-01-17",
+        "strategy": 100.0,
+        "benchmark": 100.0,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-01-22",
+        "strategy": 100.0,
+        "benchmark": 99.45,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-04",
+        "strategy": 100.0,
+        "benchmark": 91.11,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-07",
+        "strategy": 100.0,
+        "benchmark": 93.86,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-12",
+        "strategy": 100.0,
+        "benchmark": 95.9,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-17",
+        "strategy": 100.0,
+        "benchmark": 98.14,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-20",
+        "strategy": 100.0,
+        "benchmark": 99.75,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-25",
+        "strategy": 100.0,
+        "benchmark": 99.25,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-02-28",
+        "strategy": 100.0,
+        "benchmark": 94.83,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-03-04",
+        "strategy": 100.0,
+        "benchmark": 99.04,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-03-09",
+        "strategy": 100.0,
+        "benchmark": 96.2,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-03-12",
+        "strategy": 100.0,
+        "benchmark": 95.09,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-03-17",
+        "strategy": 100.0,
+        "benchmark": 89.29,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-03-20",
+        "strategy": 99.9,
+        "benchmark": 87.93,
+        "drawdown": -0.1
+      },
+      {
+        "date": "2020-03-25",
+        "strategy": 99.03,
+        "benchmark": 89.59,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-03-30",
+        "strategy": 99.03,
+        "benchmark": 88.43,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-02",
+        "strategy": 99.03,
+        "benchmark": 89.88,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-08",
+        "strategy": 99.03,
+        "benchmark": 90.99,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-13",
+        "strategy": 99.03,
+        "benchmark": 90.33,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-16",
+        "strategy": 99.03,
+        "benchmark": 91.52,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-21",
+        "strategy": 99.03,
+        "benchmark": 91.65,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-24",
+        "strategy": 99.03,
+        "benchmark": 91.39,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-04-29",
+        "strategy": 99.03,
+        "benchmark": 93.07,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-07",
+        "strategy": 99.03,
+        "benchmark": 94.47,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-12",
+        "strategy": 99.03,
+        "benchmark": 95.32,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-15",
+        "strategy": 99.03,
+        "benchmark": 94.17,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-20",
+        "strategy": 99.03,
+        "benchmark": 94.71,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-25",
+        "strategy": 99.03,
+        "benchmark": 92.17,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-05-28",
+        "strategy": 99.03,
+        "benchmark": 92.82,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-02",
+        "strategy": 99.03,
+        "benchmark": 95.88,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-05",
+        "strategy": 99.03,
+        "benchmark": 96.3,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-10",
+        "strategy": 99.03,
+        "benchmark": 97.23,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-15",
+        "strategy": 99.03,
+        "benchmark": 95.19,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-18",
+        "strategy": 99.03,
+        "benchmark": 97.34,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-23",
+        "strategy": 99.03,
+        "benchmark": 99.2,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-06-30",
+        "strategy": 99.03,
+        "benchmark": 100.22,
+        "drawdown": -0.97
+      },
+      {
+        "date": "2020-07-03",
+        "strategy": 100.85,
+        "benchmark": 106.37,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-07-08",
+        "strategy": 108.93,
+        "benchmark": 114.9,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-07-13",
+        "strategy": 110.74,
+        "benchmark": 116.8,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2020-07-16",
+        "strategy": 103.05,
+        "benchmark": 108.7,
+        "drawdown": -6.94
+      },
+      {
+        "date": "2020-07-21",
+        "strategy": 107.04,
+        "benchmark": 112.91,
+        "drawdown": -3.34
+      },
+      {
+        "date": "2020-07-24",
+        "strategy": 102.81,
+        "benchmark": 108.44,
+        "drawdown": -7.16
+      },
+      {
+        "date": "2020-07-29",
+        "strategy": 106.77,
+        "benchmark": 112.62,
+        "drawdown": -3.58
+      },
+      {
+        "date": "2020-08-03",
+        "strategy": 108.87,
+        "benchmark": 114.84,
+        "drawdown": -1.68
+      },
+      {
+        "date": "2020-08-06",
+        "strategy": 108.68,
+        "benchmark": 114.63,
+        "drawdown": -1.86
+      },
+      {
+        "date": "2020-08-11",
+        "strategy": 106.83,
+        "benchmark": 112.68,
+        "drawdown": -3.53
+      },
+      {
+        "date": "2020-08-14",
+        "strategy": 107.35,
+        "benchmark": 113.23,
+        "drawdown": -3.06
+      },
+      {
+        "date": "2020-08-19",
+        "strategy": 108.06,
+        "benchmark": 114.1,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-08-24",
+        "strategy": 108.06,
+        "benchmark": 114.46,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-08-27",
+        "strategy": 108.06,
+        "benchmark": 113.88,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-01",
+        "strategy": 108.06,
+        "benchmark": 116.54,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-04",
+        "strategy": 108.06,
+        "benchmark": 114.81,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-09",
+        "strategy": 108.06,
+        "benchmark": 110.34,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-14",
+        "strategy": 108.06,
+        "benchmark": 111.94,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-17",
+        "strategy": 108.06,
+        "benchmark": 111.5,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-22",
+        "strategy": 108.06,
+        "benchmark": 111.57,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-25",
+        "strategy": 108.06,
+        "benchmark": 109.99,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-09-30",
+        "strategy": 108.06,
+        "benchmark": 110.41,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-10-13",
+        "strategy": 108.06,
+        "benchmark": 116.47,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-10-16",
+        "strategy": 108.06,
+        "benchmark": 115.33,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-10-21",
+        "strategy": 108.06,
+        "benchmark": 115.35,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-10-26",
+        "strategy": 108.06,
+        "benchmark": 112.91,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-10-29",
+        "strategy": 108.06,
+        "benchmark": 114.88,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-03",
+        "strategy": 108.06,
+        "benchmark": 114.99,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-06",
+        "strategy": 108.06,
+        "benchmark": 117.59,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-11",
+        "strategy": 108.06,
+        "benchmark": 118.05,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-16",
+        "strategy": 108.06,
+        "benchmark": 118.03,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-19",
+        "strategy": 108.06,
+        "benchmark": 118.61,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-24",
+        "strategy": 108.06,
+        "benchmark": 119.72,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-11-27",
+        "strategy": 108.06,
+        "benchmark": 119.88,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-02",
+        "strategy": 108.06,
+        "benchmark": 121.96,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-07",
+        "strategy": 108.06,
+        "benchmark": 120.88,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-10",
+        "strategy": 108.06,
+        "benchmark": 118.91,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-15",
+        "strategy": 108.06,
+        "benchmark": 119.02,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-18",
+        "strategy": 108.06,
+        "benchmark": 120.34,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-23",
+        "strategy": 108.06,
+        "benchmark": 120.51,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-28",
+        "strategy": 108.06,
+        "benchmark": 121.89,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2020-12-31",
+        "strategy": 108.06,
+        "benchmark": 125.43,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2021-01-06",
+        "strategy": 108.06,
+        "benchmark": 130.39,
+        "drawdown": -2.41
+      },
+      {
+        "date": "2021-01-11",
+        "strategy": 106.54,
+        "benchmark": 130.96,
+        "drawdown": -3.79
+      },
+      {
+        "date": "2021-01-14",
+        "strategy": 107.11,
+        "benchmark": 131.66,
+        "drawdown": -3.27
+      },
+      {
+        "date": "2021-01-19",
+        "strategy": 106.46,
+        "benchmark": 130.87,
+        "drawdown": -3.86
+      },
+      {
+        "date": "2021-01-22",
+        "strategy": 109.05,
+        "benchmark": 134.05,
+        "drawdown": -1.52
+      },
+      {
+        "date": "2021-01-27",
+        "strategy": 108.24,
+        "benchmark": 133.05,
+        "drawdown": -2.26
+      },
+      {
+        "date": "2021-02-01",
+        "strategy": 105.97,
+        "benchmark": 130.39,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-02-04",
+        "strategy": 105.97,
+        "benchmark": 131.75,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-02-09",
+        "strategy": 105.97,
+        "benchmark": 136.86,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-02-19",
+        "strategy": 105.97,
+        "benchmark": 139.09,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-02-24",
+        "strategy": 105.97,
+        "benchmark": 130.87,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-01",
+        "strategy": 105.97,
+        "benchmark": 130.42,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-04",
+        "strategy": 105.97,
+        "benchmark": 127.1,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-09",
+        "strategy": 105.97,
+        "benchmark": 119.64,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-12",
+        "strategy": 105.97,
+        "benchmark": 123.86,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-17",
+        "strategy": 105.97,
+        "benchmark": 122.77,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2021-03-22",
+        "strategy": 104.12,
+        "benchmark": 121.72,
+        "drawdown": -5.97
+      },
+      {
+        "date": "2021-03-25",
+        "strategy": 101.43,
+        "benchmark": 118.57,
+        "drawdown": -8.4
+      },
+      {
+        "date": "2021-03-30",
+        "strategy": 103.81,
+        "benchmark": 122.62,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-02",
+        "strategy": 103.81,
+        "benchmark": 124.23,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-08",
+        "strategy": 103.81,
+        "benchmark": 123.04,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-13",
+        "strategy": 103.81,
+        "benchmark": 118.89,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-16",
+        "strategy": 103.81,
+        "benchmark": 119.53,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-21",
+        "strategy": 103.81,
+        "benchmark": 122.72,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-26",
+        "strategy": 103.81,
+        "benchmark": 122.2,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-04-29",
+        "strategy": 103.81,
+        "benchmark": 124.29,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-07",
+        "strategy": 103.81,
+        "benchmark": 120.25,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-12",
+        "strategy": 103.81,
+        "benchmark": 121.41,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-17",
+        "strategy": 103.81,
+        "benchmark": 124.79,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-20",
+        "strategy": 103.81,
+        "benchmark": 124.83,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-25",
+        "strategy": 103.81,
+        "benchmark": 128.01,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-05-28",
+        "strategy": 103.81,
+        "benchmark": 128.07,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-02",
+        "strategy": 103.81,
+        "benchmark": 127.32,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-07",
+        "strategy": 103.81,
+        "benchmark": 127.02,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-10",
+        "strategy": 103.81,
+        "benchmark": 126.87,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-16",
+        "strategy": 103.81,
+        "benchmark": 122.28,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-21",
+        "strategy": 103.81,
+        "benchmark": 122.52,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-24",
+        "strategy": 103.81,
+        "benchmark": 124.1,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-06-29",
+        "strategy": 103.81,
+        "benchmark": 124.93,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-02",
+        "strategy": 103.81,
+        "benchmark": 122.29,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-07",
+        "strategy": 103.81,
+        "benchmark": 123.72,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-12",
+        "strategy": 103.81,
+        "benchmark": 123.54,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-15",
+        "strategy": 103.81,
+        "benchmark": 123.99,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-20",
+        "strategy": 103.81,
+        "benchmark": 122.96,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-23",
+        "strategy": 103.81,
+        "benchmark": 122.49,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-07-28",
+        "strategy": 103.81,
+        "benchmark": 114.58,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-02",
+        "strategy": 103.81,
+        "benchmark": 118.75,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-05",
+        "strategy": 103.81,
+        "benchmark": 119.11,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-10",
+        "strategy": 103.81,
+        "benchmark": 121.38,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-13",
+        "strategy": 103.81,
+        "benchmark": 119.04,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-18",
+        "strategy": 103.81,
+        "benchmark": 117.8,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-23",
+        "strategy": 103.81,
+        "benchmark": 116.39,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-26",
+        "strategy": 103.81,
+        "benchmark": 115.57,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-08-31",
+        "strategy": 103.81,
+        "benchmark": 115.66,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-03",
+        "strategy": 103.81,
+        "benchmark": 116.56,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-08",
+        "strategy": 103.81,
+        "benchmark": 119.67,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-13",
+        "strategy": 103.81,
+        "benchmark": 120.14,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-16",
+        "strategy": 103.81,
+        "benchmark": 115.71,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-23",
+        "strategy": 103.81,
+        "benchmark": 116.81,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-09-28",
+        "strategy": 103.81,
+        "benchmark": 117.55,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-08",
+        "strategy": 103.81,
+        "benchmark": 118.66,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-13",
+        "strategy": 103.81,
+        "benchmark": 118.9,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-18",
+        "strategy": 103.81,
+        "benchmark": 117.33,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-21",
+        "strategy": 103.81,
+        "benchmark": 118.61,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-26",
+        "strategy": 103.81,
+        "benchmark": 119.45,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-10-29",
+        "strategy": 103.81,
+        "benchmark": 118.15,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-03",
+        "strategy": 103.81,
+        "benchmark": 116.04,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-08",
+        "strategy": 103.81,
+        "benchmark": 116.69,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-11",
+        "strategy": 103.81,
+        "benchmark": 117.9,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-16",
+        "strategy": 103.81,
+        "benchmark": 117.53,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-19",
+        "strategy": 103.81,
+        "benchmark": 117.7,
+        "drawdown": -6.26
+      },
+      {
+        "date": "2021-11-24",
+        "strategy": 103.7,
+        "benchmark": 118.34,
+        "drawdown": -6.35
+      },
+      {
+        "date": "2021-11-29",
+        "strategy": 102.33,
+        "benchmark": 116.77,
+        "drawdown": -7.59
+      },
+      {
+        "date": "2021-12-02",
+        "strategy": 102.43,
+        "benchmark": 116.88,
+        "drawdown": -7.5
+      },
+      {
+        "date": "2021-12-07",
+        "strategy": 103.82,
+        "benchmark": 118.47,
+        "drawdown": -6.25
+      },
+      {
+        "date": "2021-12-10",
+        "strategy": 106.62,
+        "benchmark": 121.67,
+        "drawdown": -3.71
+      },
+      {
+        "date": "2021-12-15",
+        "strategy": 105.48,
+        "benchmark": 120.48,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2021-12-20",
+        "strategy": 105.48,
+        "benchmark": 117.46,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2021-12-23",
+        "strategy": 105.48,
+        "benchmark": 119.11,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2021-12-28",
+        "strategy": 105.48,
+        "benchmark": 119.28,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2021-12-31",
+        "strategy": 105.48,
+        "benchmark": 118.91,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-06",
+        "strategy": 105.48,
+        "benchmark": 115.97,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-11",
+        "strategy": 105.48,
+        "benchmark": 115.47,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-14",
+        "strategy": 105.48,
+        "benchmark": 113.76,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-19",
+        "strategy": 105.48,
+        "benchmark": 115.06,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-24",
+        "strategy": 105.48,
+        "benchmark": 115.21,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-01-27",
+        "strategy": 105.48,
+        "benchmark": 111.19,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-02-08",
+        "strategy": 105.48,
+        "benchmark": 110.93,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-02-11",
+        "strategy": 105.48,
+        "benchmark": 110.75,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-02-16",
+        "strategy": 105.48,
+        "benchmark": 111.15,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-02-21",
+        "strategy": 105.48,
+        "benchmark": 111.54,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-02-24",
+        "strategy": 105.48,
+        "benchmark": 109.01,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-01",
+        "strategy": 105.48,
+        "benchmark": 111.19,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-04",
+        "strategy": 105.48,
+        "benchmark": 108.22,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-09",
+        "strategy": 105.48,
+        "benchmark": 101.72,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-14",
+        "strategy": 105.48,
+        "benchmark": 100.48,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-17",
+        "strategy": 105.48,
+        "benchmark": 101.99,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-22",
+        "strategy": 105.48,
+        "benchmark": 102.42,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-25",
+        "strategy": 105.48,
+        "benchmark": 100.47,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-03-30",
+        "strategy": 105.48,
+        "benchmark": 102.39,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-06",
+        "strategy": 105.48,
+        "benchmark": 102.62,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-11",
+        "strategy": 105.48,
+        "benchmark": 98.68,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-14",
+        "strategy": 105.48,
+        "benchmark": 100.88,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-19",
+        "strategy": 105.48,
+        "benchmark": 99.52,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-22",
+        "strategy": 105.48,
+        "benchmark": 96.59,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-04-27",
+        "strategy": 105.48,
+        "benchmark": 93.76,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-05-05",
+        "strategy": 105.48,
+        "benchmark": 96.52,
+        "drawdown": -4.75
+      },
+      {
+        "date": "2022-05-10",
+        "strategy": 106.53,
+        "benchmark": 94.34,
+        "drawdown": -3.8
+      },
+      {
+        "date": "2022-05-13",
+        "strategy": 108.39,
+        "benchmark": 96.0,
+        "drawdown": -2.11
+      },
+      {
+        "date": "2022-05-18",
+        "strategy": 108.38,
+        "benchmark": 96.08,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-05-23",
+        "strategy": 108.38,
+        "benchmark": 97.57,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-05-26",
+        "strategy": 108.38,
+        "benchmark": 96.11,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-05-31",
+        "strategy": 108.38,
+        "benchmark": 98.48,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-06",
+        "strategy": 108.38,
+        "benchmark": 100.27,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-09",
+        "strategy": 108.38,
+        "benchmark": 100.5,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-14",
+        "strategy": 108.38,
+        "benchmark": 101.62,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-17",
+        "strategy": 108.38,
+        "benchmark": 103.71,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-22",
+        "strategy": 108.38,
+        "benchmark": 102.79,
+        "drawdown": -2.13
+      },
+      {
+        "date": "2022-06-27",
+        "strategy": 108.27,
+        "benchmark": 106.97,
+        "drawdown": -2.23
+      },
+      {
+        "date": "2022-06-30",
+        "strategy": 109.26,
+        "benchmark": 107.95,
+        "drawdown": -1.33
+      },
+      {
+        "date": "2022-07-05",
+        "strategy": 109.37,
+        "benchmark": 108.06,
+        "drawdown": -1.23
+      },
+      {
+        "date": "2022-07-08",
+        "strategy": 107.89,
+        "benchmark": 106.59,
+        "drawdown": -2.57
+      },
+      {
+        "date": "2022-07-13",
+        "strategy": 105.98,
+        "benchmark": 104.01,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-07-18",
+        "strategy": 105.98,
+        "benchmark": 103.31,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-07-21",
+        "strategy": 105.98,
+        "benchmark": 101.95,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-07-26",
+        "strategy": 105.98,
+        "benchmark": 102.19,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-07-29",
+        "strategy": 105.98,
+        "benchmark": 100.37,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-03",
+        "strategy": 105.98,
+        "benchmark": 97.88,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-08",
+        "strategy": 105.98,
+        "benchmark": 99.84,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-11",
+        "strategy": 105.98,
+        "benchmark": 100.93,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-16",
+        "strategy": 105.98,
+        "benchmark": 100.55,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-19",
+        "strategy": 105.98,
+        "benchmark": 99.91,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-24",
+        "strategy": 105.98,
+        "benchmark": 98.26,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-08-29",
+        "strategy": 105.98,
+        "benchmark": 98.43,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-01",
+        "strategy": 105.98,
+        "benchmark": 97.33,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-06",
+        "strategy": 105.98,
+        "benchmark": 97.53,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-09",
+        "strategy": 105.98,
+        "benchmark": 98.53,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-15",
+        "strategy": 105.98,
+        "benchmark": 96.93,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-20",
+        "strategy": 105.98,
+        "benchmark": 94.66,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-23",
+        "strategy": 105.98,
+        "benchmark": 92.81,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-09-28",
+        "strategy": 105.98,
+        "benchmark": 92.15,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-10",
+        "strategy": 105.98,
+        "benchmark": 89.56,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-13",
+        "strategy": 105.98,
+        "benchmark": 90.32,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-18",
+        "strategy": 105.98,
+        "benchmark": 92.38,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-21",
+        "strategy": 105.98,
+        "benchmark": 90.08,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-26",
+        "strategy": 105.98,
+        "benchmark": 88.02,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-10-31",
+        "strategy": 105.98,
+        "benchmark": 84.45,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-03",
+        "strategy": 105.98,
+        "benchmark": 87.8,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-08",
+        "strategy": 105.98,
+        "benchmark": 90.24,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-11",
+        "strategy": 105.98,
+        "benchmark": 91.18,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-16",
+        "strategy": 105.98,
+        "benchmark": 92.29,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-21",
+        "strategy": 105.98,
+        "benchmark": 90.72,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-24",
+        "strategy": 105.98,
+        "benchmark": 90.42,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-11-29",
+        "strategy": 105.98,
+        "benchmark": 92.62,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-02",
+        "strategy": 105.98,
+        "benchmark": 93.17,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-07",
+        "strategy": 105.98,
+        "benchmark": 95.27,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-12",
+        "strategy": 105.98,
+        "benchmark": 95.15,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-15",
+        "strategy": 105.98,
+        "benchmark": 95.12,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-20",
+        "strategy": 105.98,
+        "benchmark": 92.16,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-23",
+        "strategy": 105.98,
+        "benchmark": 92.14,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2022-12-28",
+        "strategy": 105.98,
+        "benchmark": 93.17,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-03",
+        "strategy": 105.98,
+        "benchmark": 93.57,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-06",
+        "strategy": 105.98,
+        "benchmark": 95.81,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-11",
+        "strategy": 105.98,
+        "benchmark": 96.51,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-16",
+        "strategy": 105.98,
+        "benchmark": 99.59,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-19",
+        "strategy": 105.98,
+        "benchmark": 100.03,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2023-01-31",
+        "strategy": 104.64,
+        "benchmark": 100.05,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-03",
+        "strategy": 104.64,
+        "benchmark": 99.68,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-08",
+        "strategy": 104.64,
+        "benchmark": 98.11,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-13",
+        "strategy": 104.64,
+        "benchmark": 99.73,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-16",
+        "strategy": 104.64,
+        "benchmark": 98.52,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-21",
+        "strategy": 104.64,
+        "benchmark": 99.75,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-02-24",
+        "strategy": 104.64,
+        "benchmark": 97.74,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-01",
+        "strategy": 104.64,
+        "benchmark": 99.33,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-06",
+        "strategy": 104.64,
+        "benchmark": 98.9,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-09",
+        "strategy": 104.64,
+        "benchmark": 96.75,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-14",
+        "strategy": 104.64,
+        "benchmark": 95.9,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-17",
+        "strategy": 104.64,
+        "benchmark": 95.28,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-22",
+        "strategy": 104.64,
+        "benchmark": 96.26,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-27",
+        "strategy": 104.64,
+        "benchmark": 96.57,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-03-30",
+        "strategy": 104.64,
+        "benchmark": 97.2,
+        "drawdown": -5.5
+      },
+      {
+        "date": "2023-04-04",
+        "strategy": 104.54,
+        "benchmark": 98.75,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2023-04-10",
+        "strategy": 104.58,
+        "benchmark": 98.8,
+        "drawdown": -5.56
+      },
+      {
+        "date": "2023-04-13",
+        "strategy": 103.67,
+        "benchmark": 97.93,
+        "drawdown": -6.38
+      },
+      {
+        "date": "2023-04-18",
+        "strategy": 106.04,
+        "benchmark": 100.17,
+        "drawdown": -4.24
+      },
+      {
+        "date": "2023-04-21",
+        "strategy": 102.74,
+        "benchmark": 97.06,
+        "drawdown": -7.22
+      },
+      {
+        "date": "2023-04-26",
+        "strategy": 100.87,
+        "benchmark": 95.29,
+        "drawdown": -8.91
+      },
+      {
+        "date": "2023-05-04",
+        "strategy": 101.52,
+        "benchmark": 97.0,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-09",
+        "strategy": 101.52,
+        "benchmark": 96.94,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-12",
+        "strategy": 101.52,
+        "benchmark": 94.78,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-17",
+        "strategy": 101.52,
+        "benchmark": 95.31,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-22",
+        "strategy": 101.52,
+        "benchmark": 95.53,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-25",
+        "strategy": 101.52,
+        "benchmark": 92.67,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-05-30",
+        "strategy": 101.52,
+        "benchmark": 92.37,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-02",
+        "strategy": 101.52,
+        "benchmark": 92.95,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-07",
+        "strategy": 101.52,
+        "benchmark": 91.2,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-12",
+        "strategy": 101.52,
+        "benchmark": 92.53,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-15",
+        "strategy": 101.52,
+        "benchmark": 94.48,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-20",
+        "strategy": 101.52,
+        "benchmark": 94.45,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-27",
+        "strategy": 101.52,
+        "benchmark": 92.55,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-06-30",
+        "strategy": 101.52,
+        "benchmark": 92.48,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-07-05",
+        "strategy": 101.52,
+        "benchmark": 93.12,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-07-10",
+        "strategy": 101.52,
+        "benchmark": 92.53,
+        "drawdown": -8.33
+      },
+      {
+        "date": "2023-07-13",
+        "strategy": 102.17,
+        "benchmark": 93.83,
+        "drawdown": -7.73
+      },
+      {
+        "date": "2023-07-18",
+        "strategy": 101.03,
+        "benchmark": 92.78,
+        "drawdown": -8.76
+      },
+      {
+        "date": "2023-07-21",
+        "strategy": 100.17,
+        "benchmark": 91.99,
+        "drawdown": -9.54
+      },
+      {
+        "date": "2023-07-26",
+        "strategy": 102.4,
+        "benchmark": 94.03,
+        "drawdown": -7.53
+      },
+      {
+        "date": "2023-07-31",
+        "strategy": 104.54,
+        "benchmark": 96.63,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-03",
+        "strategy": 104.54,
+        "benchmark": 96.39,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-08",
+        "strategy": 104.54,
+        "benchmark": 95.79,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-11",
+        "strategy": 104.54,
+        "benchmark": 93.49,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-16",
+        "strategy": 104.54,
+        "benchmark": 91.9,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-21",
+        "strategy": 104.54,
+        "benchmark": 89.76,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-24",
+        "strategy": 104.54,
+        "benchmark": 89.62,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-08-29",
+        "strategy": 104.54,
+        "benchmark": 91.22,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-01",
+        "strategy": 104.54,
+        "benchmark": 91.25,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-06",
+        "strategy": 104.54,
+        "benchmark": 91.75,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-11",
+        "strategy": 104.54,
+        "benchmark": 90.68,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-14",
+        "strategy": 104.54,
+        "benchmark": 89.86,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-19",
+        "strategy": 104.54,
+        "benchmark": 89.55,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-22",
+        "strategy": 104.54,
+        "benchmark": 89.99,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-09-27",
+        "strategy": 104.54,
+        "benchmark": 89.06,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-10",
+        "strategy": 104.54,
+        "benchmark": 88.02,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-13",
+        "strategy": 104.54,
+        "benchmark": 88.17,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-18",
+        "strategy": 104.54,
+        "benchmark": 86.9,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-23",
+        "strategy": 104.54,
+        "benchmark": 83.62,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-26",
+        "strategy": 104.54,
+        "benchmark": 84.58,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-10-31",
+        "strategy": 104.54,
+        "benchmark": 85.98,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-11-03",
+        "strategy": 104.54,
+        "benchmark": 86.26,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-11-08",
+        "strategy": 104.54,
+        "benchmark": 86.91,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-11-13",
+        "strategy": 104.54,
+        "benchmark": 86.15,
+        "drawdown": -5.59
+      },
+      {
+        "date": "2023-11-16",
+        "strategy": 104.44,
+        "benchmark": 85.98,
+        "drawdown": -5.69
+      },
+      {
+        "date": "2023-11-21",
+        "strategy": 104.69,
+        "benchmark": 86.19,
+        "drawdown": -5.46
+      },
+      {
+        "date": "2023-11-24",
+        "strategy": 103.43,
+        "benchmark": 85.15,
+        "drawdown": -6.59
+      },
+      {
+        "date": "2023-11-29",
+        "strategy": 101.98,
+        "benchmark": 83.96,
+        "drawdown": -7.91
+      },
+      {
+        "date": "2023-12-04",
+        "strategy": 101.16,
+        "benchmark": 83.28,
+        "drawdown": -8.65
+      },
+      {
+        "date": "2023-12-07",
+        "strategy": 99.14,
+        "benchmark": 81.62,
+        "drawdown": -10.47
+      },
+      {
+        "date": "2023-12-12",
+        "strategy": 100.18,
+        "benchmark": 82.48,
+        "drawdown": -9.53
+      },
+      {
+        "date": "2023-12-15",
+        "strategy": 97.69,
+        "benchmark": 80.43,
+        "drawdown": -11.78
+      },
+      {
+        "date": "2023-12-20",
+        "strategy": 96.4,
+        "benchmark": 79.37,
+        "drawdown": -12.94
+      },
+      {
+        "date": "2023-12-25",
+        "strategy": 97.47,
+        "benchmark": 80.57,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2023-12-28",
+        "strategy": 97.47,
+        "benchmark": 82.18,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-03",
+        "strategy": 97.47,
+        "benchmark": 81.31,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-08",
+        "strategy": 97.47,
+        "benchmark": 79.09,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-11",
+        "strategy": 97.47,
+        "benchmark": 79.32,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-16",
+        "strategy": 97.47,
+        "benchmark": 79.45,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-19",
+        "strategy": 97.47,
+        "benchmark": 78.7,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-24",
+        "strategy": 97.47,
+        "benchmark": 78.87,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-01-29",
+        "strategy": 97.47,
+        "benchmark": 79.52,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-02-01",
+        "strategy": 97.47,
+        "benchmark": 77.44,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-02-06",
+        "strategy": 97.47,
+        "benchmark": 79.71,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-02-19",
+        "strategy": 97.47,
+        "benchmark": 81.92,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-02-22",
+        "strategy": 97.47,
+        "benchmark": 83.92,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-02-27",
+        "strategy": 97.47,
+        "benchmark": 84.11,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-01",
+        "strategy": 97.47,
+        "benchmark": 85.15,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-06",
+        "strategy": 97.47,
+        "benchmark": 85.47,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-11",
+        "strategy": 97.47,
+        "benchmark": 86.39,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-14",
+        "strategy": 97.47,
+        "benchmark": 85.74,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-19",
+        "strategy": 97.47,
+        "benchmark": 86.11,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-22",
+        "strategy": 97.47,
+        "benchmark": 85.32,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-03-27",
+        "strategy": 97.47,
+        "benchmark": 84.31,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-01",
+        "strategy": 97.47,
+        "benchmark": 86.54,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-08",
+        "strategy": 97.47,
+        "benchmark": 85.12,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-11",
+        "strategy": 97.47,
+        "benchmark": 84.34,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-16",
+        "strategy": 97.47,
+        "benchmark": 84.51,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-19",
+        "strategy": 97.47,
+        "benchmark": 85.24,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-24",
+        "strategy": 97.47,
+        "benchmark": 84.76,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-04-29",
+        "strategy": 97.47,
+        "benchmark": 87.22,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-07",
+        "strategy": 97.47,
+        "benchmark": 88.07,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-10",
+        "strategy": 97.47,
+        "benchmark": 88.24,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-15",
+        "strategy": 97.47,
+        "benchmark": 87.27,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-20",
+        "strategy": 97.47,
+        "benchmark": 88.83,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-23",
+        "strategy": 97.47,
+        "benchmark": 87.65,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-28",
+        "strategy": 97.47,
+        "benchmark": 86.87,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-05-31",
+        "strategy": 97.47,
+        "benchmark": 86.16,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-05",
+        "strategy": 97.47,
+        "benchmark": 86.52,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-11",
+        "strategy": 97.47,
+        "benchmark": 85.27,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-14",
+        "strategy": 97.47,
+        "benchmark": 85.24,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-19",
+        "strategy": 97.47,
+        "benchmark": 84.93,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-24",
+        "strategy": 97.47,
+        "benchmark": 83.68,
+        "drawdown": -11.98
+      },
+      {
+        "date": "2024-06-27",
+        "strategy": 97.26,
+        "benchmark": 83.13,
+        "drawdown": -12.17
+      },
+      {
+        "date": "2024-07-02",
+        "strategy": 97.76,
+        "benchmark": 83.56,
+        "drawdown": -11.72
+      },
+      {
+        "date": "2024-07-05",
+        "strategy": 96.61,
+        "benchmark": 82.58,
+        "drawdown": -12.75
+      },
+      {
+        "date": "2024-07-10",
+        "strategy": 96.55,
+        "benchmark": 82.53,
+        "drawdown": -12.81
+      },
+      {
+        "date": "2024-07-15",
+        "strategy": 97.88,
+        "benchmark": 83.67,
+        "drawdown": -11.6
+      },
+      {
+        "date": "2024-07-18",
+        "strategy": 99.14,
+        "benchmark": 84.74,
+        "drawdown": -10.47
+      },
+      {
+        "date": "2024-07-23",
+        "strategy": 96.76,
+        "benchmark": 82.79,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-07-26",
+        "strategy": 96.76,
+        "benchmark": 82.06,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-07-31",
+        "strategy": 96.76,
+        "benchmark": 82.84,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-05",
+        "strategy": 96.76,
+        "benchmark": 80.47,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-08",
+        "strategy": 96.76,
+        "benchmark": 80.46,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-13",
+        "strategy": 96.76,
+        "benchmark": 80.25,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-16",
+        "strategy": 96.76,
+        "benchmark": 80.52,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-21",
+        "strategy": 96.76,
+        "benchmark": 79.95,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-26",
+        "strategy": 96.76,
+        "benchmark": 80.01,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-08-29",
+        "strategy": 96.76,
+        "benchmark": 78.89,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-03",
+        "strategy": 96.76,
+        "benchmark": 78.79,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-06",
+        "strategy": 96.76,
+        "benchmark": 77.77,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-11",
+        "strategy": 96.76,
+        "benchmark": 76.68,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-18",
+        "strategy": 96.76,
+        "benchmark": 76.32,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-23",
+        "strategy": 96.76,
+        "benchmark": 77.33,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-09-26",
+        "strategy": 96.76,
+        "benchmark": 85.33,
+        "drawdown": -12.62
+      },
+      {
+        "date": "2024-10-08",
+        "strategy": 111.08,
+        "benchmark": 102.44,
+        "drawdown": 0.0
+      },
+      {
+        "date": "2024-10-11",
+        "strategy": 101.45,
+        "benchmark": 93.56,
+        "drawdown": -8.67
+      },
+      {
+        "date": "2024-10-16",
+        "strategy": 100.0,
+        "benchmark": 92.22,
+        "drawdown": -9.97
+      },
+      {
+        "date": "2024-10-21",
+        "strategy": 102.71,
+        "benchmark": 94.71,
+        "drawdown": -7.54
+      },
+      {
+        "date": "2024-10-24",
+        "strategy": 102.54,
+        "benchmark": 94.56,
+        "drawdown": -7.69
+      },
+      {
+        "date": "2024-10-29",
+        "strategy": 102.43,
+        "benchmark": 94.46,
+        "drawdown": -7.79
+      },
+      {
+        "date": "2024-11-01",
+        "strategy": 101.53,
+        "benchmark": 93.63,
+        "drawdown": -8.6
+      },
+      {
+        "date": "2024-11-06",
+        "strategy": 105.03,
+        "benchmark": 96.86,
+        "drawdown": -5.45
+      },
+      {
+        "date": "2024-11-11",
+        "strategy": 108.1,
+        "benchmark": 99.43,
+        "drawdown": -2.69
+      },
+      {
+        "date": "2024-11-14",
+        "strategy": 107.99,
+        "benchmark": 97.23,
+        "drawdown": -2.79
+      },
+      {
+        "date": "2024-11-19",
+        "strategy": 106.31,
+        "benchmark": 95.72,
+        "drawdown": -4.3
+      },
+      {
+        "date": "2024-11-22",
+        "strategy": 103.34,
+        "benchmark": 93.04,
+        "drawdown": -6.97
+      },
+      {
+        "date": "2024-11-27",
+        "strategy": 104.34,
+        "benchmark": 94.04,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-02",
+        "strategy": 104.34,
+        "benchmark": 95.01,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-05",
+        "strategy": 104.34,
+        "benchmark": 94.39,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-10",
+        "strategy": 104.34,
+        "benchmark": 96.17,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-13",
+        "strategy": 104.34,
+        "benchmark": 94.66,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-18",
+        "strategy": 104.34,
+        "benchmark": 94.87,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-23",
+        "strategy": 104.34,
+        "benchmark": 94.67,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-26",
+        "strategy": 104.34,
+        "benchmark": 95.97,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2024-12-31",
+        "strategy": 104.34,
+        "benchmark": 94.71,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-06",
+        "strategy": 104.34,
+        "benchmark": 90.71,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-09",
+        "strategy": 104.34,
+        "benchmark": 90.97,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-14",
+        "strategy": 104.34,
+        "benchmark": 91.95,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-17",
+        "strategy": 104.34,
+        "benchmark": 91.76,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-22",
+        "strategy": 104.34,
+        "benchmark": 91.39,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-01-27",
+        "strategy": 104.34,
+        "benchmark": 91.87,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-07",
+        "strategy": 104.34,
+        "benchmark": 93.69,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-12",
+        "strategy": 104.34,
+        "benchmark": 94.34,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-17",
+        "strategy": 104.34,
+        "benchmark": 95.01,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-20",
+        "strategy": 104.34,
+        "benchmark": 94.56,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-25",
+        "strategy": 104.34,
+        "benchmark": 94.48,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-02-28",
+        "strategy": 104.34,
+        "benchmark": 93.63,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-05",
+        "strategy": 104.34,
+        "benchmark": 93.93,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-10",
+        "strategy": 104.34,
+        "benchmark": 94.56,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-13",
+        "strategy": 104.34,
+        "benchmark": 94.14,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-18",
+        "strategy": 104.34,
+        "benchmark": 96.46,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-21",
+        "strategy": 104.34,
+        "benchmark": 94.22,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-26",
+        "strategy": 104.34,
+        "benchmark": 94.33,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-03-31",
+        "strategy": 104.34,
+        "benchmark": 93.56,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-03",
+        "strategy": 104.34,
+        "benchmark": 92.94,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-09",
+        "strategy": 104.34,
+        "benchmark": 88.73,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-14",
+        "strategy": 104.34,
+        "benchmark": 90.48,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-17",
+        "strategy": 104.34,
+        "benchmark": 90.79,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-22",
+        "strategy": 104.34,
+        "benchmark": 91.07,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-25",
+        "strategy": 104.34,
+        "benchmark": 91.15,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-04-30",
+        "strategy": 104.34,
+        "benchmark": 90.75,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-05-08",
+        "strategy": 104.34,
+        "benchmark": 92.73,
+        "drawdown": -6.07
+      },
+      {
+        "date": "2025-05-13",
+        "strategy": 105.6,
+        "benchmark": 93.78,
+        "drawdown": -4.94
+      },
+      {
+        "date": "2025-05-16",
+        "strategy": 105.4,
+        "benchmark": 93.6,
+        "drawdown": -5.12
+      },
+      {
+        "date": "2025-05-21",
+        "strategy": 106.14,
+        "benchmark": 94.26,
+        "drawdown": -4.45
+      },
+      {
+        "date": "2025-05-26",
+        "strategy": 104.62,
+        "benchmark": 92.91,
+        "drawdown": -5.82
+      },
+      {
+        "date": "2025-05-29",
+        "strategy": 104.58,
+        "benchmark": 92.87,
+        "drawdown": -5.86
+      },
+      {
+        "date": "2025-06-04",
+        "strategy": 104.85,
+        "benchmark": 93.11,
+        "drawdown": -5.61
+      },
+      {
+        "date": "2025-06-09",
+        "strategy": 105.3,
+        "benchmark": 93.51,
+        "drawdown": -5.21
+      },
+      {
+        "date": "2025-06-12",
+        "strategy": 105.49,
+        "benchmark": 93.68,
+        "drawdown": -5.04
+      },
+      {
+        "date": "2025-06-17",
+        "strategy": 104.89,
+        "benchmark": 93.15,
+        "drawdown": -5.57
+      },
+      {
+        "date": "2025-06-20",
+        "strategy": 104.25,
+        "benchmark": 92.58,
+        "drawdown": -6.15
+      },
+      {
+        "date": "2025-06-25",
+        "strategy": 107.22,
+        "benchmark": 95.31,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-06-30",
+        "strategy": 107.22,
+        "benchmark": 94.73,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-03",
+        "strategy": 107.22,
+        "benchmark": 95.5,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-08",
+        "strategy": 107.22,
+        "benchmark": 96.24,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-11",
+        "strategy": 107.22,
+        "benchmark": 96.63,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-16",
+        "strategy": 107.22,
+        "benchmark": 96.45,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-21",
+        "strategy": 107.22,
+        "benchmark": 98.33,
+        "drawdown": -3.48
+      },
+      {
+        "date": "2025-07-24",
+        "strategy": 107.87,
+        "benchmark": 99.86,
+        "drawdown": -2.89
+      },
+      {
+        "date": "2025-07-29",
+        "strategy": 107.95,
+        "benchmark": 99.93,
+        "drawdown": -2.82
+      },
+      {
+        "date": "2025-08-01",
+        "strategy": 105.43,
+        "benchmark": 97.6,
+        "drawdown": -5.09
+      },
+      {
+        "date": "2025-08-06",
+        "strategy": 105.73,
+        "benchmark": 99.0,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-08-11",
+        "strategy": 105.73,
+        "benchmark": 99.22,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-08-14",
+        "strategy": 105.73,
+        "benchmark": 100.44,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-08-19",
+        "strategy": 105.73,
+        "benchmark": 101.65,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-08-22",
+        "strategy": 105.73,
+        "benchmark": 105.37,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-08-27",
+        "strategy": 105.73,
+        "benchmark": 105.57,
+        "drawdown": -4.82
+      },
+      {
+        "date": "2025-09-01",
+        "strategy": 107.04,
+        "benchmark": 108.88,
+        "drawdown": -3.64
+      },
+      {
+        "date": "2025-09-04",
+        "strategy": 103.29,
+        "benchmark": 105.06,
+        "drawdown": -7.01
+      },
+      {
+        "date": "2025-09-09",
+        "strategy": 104.87,
+        "benchmark": 106.77,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-09-12",
+        "strategy": 104.87,
+        "benchmark": 108.84,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-09-17",
+        "strategy": 104.87,
+        "benchmark": 109.54,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-09-22",
+        "strategy": 104.87,
+        "benchmark": 108.85,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-09-25",
+        "strategy": 104.87,
+        "benchmark": 110.56,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-09-30",
+        "strategy": 104.87,
+        "benchmark": 111.69,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-10-13",
+        "strategy": 104.87,
+        "benchmark": 110.57,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-10-16",
+        "strategy": 104.87,
+        "benchmark": 111.16,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-10-21",
+        "strategy": 104.87,
+        "benchmark": 110.9,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-10-24",
+        "strategy": 104.87,
+        "benchmark": 112.17,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-10-29",
+        "strategy": 104.87,
+        "benchmark": 114.27,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-03",
+        "strategy": 104.87,
+        "benchmark": 112.0,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-06",
+        "strategy": 104.87,
+        "benchmark": 112.96,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-11",
+        "strategy": 104.87,
+        "benchmark": 111.97,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-14",
+        "strategy": 104.87,
+        "benchmark": 111.39,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-19",
+        "strategy": 104.87,
+        "benchmark": 110.43,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-24",
+        "strategy": 104.87,
+        "benchmark": 107.06,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-11-27",
+        "strategy": 104.87,
+        "benchmark": 108.68,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-02",
+        "strategy": 104.87,
+        "benchmark": 109.61,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-05",
+        "strategy": 104.87,
+        "benchmark": 110.34,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-10",
+        "strategy": 104.87,
+        "benchmark": 110.52,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-15",
+        "strategy": 104.87,
+        "benchmark": 109.56,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-18",
+        "strategy": 104.87,
+        "benchmark": 109.58,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-23",
+        "strategy": 104.87,
+        "benchmark": 111.21,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-26",
+        "strategy": 104.87,
+        "benchmark": 112.09,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2025-12-31",
+        "strategy": 104.87,
+        "benchmark": 111.43,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-07",
+        "strategy": 104.87,
+        "benchmark": 114.97,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-12",
+        "strategy": 104.87,
+        "benchmark": 115.28,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-15",
+        "strategy": 104.87,
+        "benchmark": 114.36,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-20",
+        "strategy": 104.87,
+        "benchmark": 113.58,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-23",
+        "strategy": 104.87,
+        "benchmark": 113.18,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-01-28",
+        "strategy": 104.87,
+        "benchmark": 113.55,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-02-02",
+        "strategy": 104.87,
+        "benchmark": 110.86,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-02-05",
+        "strategy": 104.87,
+        "benchmark": 112.41,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-02-10",
+        "strategy": 104.87,
+        "benchmark": 113.71,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-02-13",
+        "strategy": 104.87,
+        "benchmark": 112.17,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-02-26",
+        "strategy": 104.87,
+        "benchmark": 113.77,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-03",
+        "strategy": 104.87,
+        "benchmark": 112.06,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-06",
+        "strategy": 104.87,
+        "benchmark": 112.17,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-11",
+        "strategy": 104.87,
+        "benchmark": 113.23,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-16",
+        "strategy": 104.87,
+        "benchmark": 112.44,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-19",
+        "strategy": 104.87,
+        "benchmark": 110.31,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-24",
+        "strategy": 104.87,
+        "benchmark": 107.7,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-03-27",
+        "strategy": 104.87,
+        "benchmark": 108.37,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-01",
+        "strategy": 104.87,
+        "benchmark": 108.93,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-07",
+        "strategy": 104.87,
+        "benchmark": 106.88,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-10",
+        "strategy": 104.87,
+        "benchmark": 111.59,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-15",
+        "strategy": 104.87,
+        "benchmark": 112.77,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-20",
+        "strategy": 104.87,
+        "benchmark": 114.5,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-23",
+        "strategy": 104.87,
+        "benchmark": 115.2,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-04-28",
+        "strategy": 104.87,
+        "benchmark": 114.52,
+        "drawdown": -5.6
+      },
+      {
+        "date": "2026-05-06",
+        "strategy": 104.76,
+        "benchmark": 117.38,
+        "drawdown": -5.69
+      },
+      {
+        "date": "2026-05-11",
+        "strategy": 106.26,
+        "benchmark": 119.18,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-05-14",
+        "strategy": 106.26,
+        "benchmark": 118.29,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-05-19",
+        "strategy": 106.26,
+        "benchmark": 116.8,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-05-22",
+        "strategy": 106.26,
+        "benchmark": 116.61,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-05-27",
+        "strategy": 106.26,
+        "benchmark": 118.13,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-01",
+        "strategy": 106.26,
+        "benchmark": 116.59,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-04",
+        "strategy": 106.26,
+        "benchmark": 118.05,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-09",
+        "strategy": 106.26,
+        "benchmark": 115.57,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-12",
+        "strategy": 106.26,
+        "benchmark": 114.98,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-17",
+        "strategy": 106.26,
+        "benchmark": 118.69,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-23",
+        "strategy": 106.26,
+        "benchmark": 118.4,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-06-26",
+        "strategy": 106.26,
+        "benchmark": 117.17,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-07-01",
+        "strategy": 106.26,
+        "benchmark": 119.35,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-07-06",
+        "strategy": 106.26,
+        "benchmark": 116.54,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-07-09",
+        "strategy": 106.26,
+        "benchmark": 117.36,
+        "drawdown": -4.34
+      },
+      {
+        "date": "2026-07-10",
+        "strategy": 106.26,
+        "benchmark": 115.07,
+        "drawdown": -4.34
+      }
+    ],
+    "testStart": "2020-01-17",
+    "testEnd": "2026-07-10",
+    "assumptions": {
+      "transactionCostBps": 10,
+      "slippageBps": 0,
+      "execution": "次日收盘",
+      "mode": "多头/现金"
+    }
+  },
+  "sentiment": {
+    "score": 0.162,
+    "distribution": {
+      "positive": 5,
+      "neutral": 2,
+      "negative": 3
+    },
+    "news": [
+      {
+        "title": "A股开盘：三大指数集体高开",
+        "summary": "A股开盘，上证指数涨0.73%，深证成指涨1.18%，创业板指涨2.20%。",
+        "published": "2026-07-20 09:26:15",
+        "source": "东方财富Choice数据",
+        "url": "http://finance.eastmoney.com/a/202607203812001231.html",
+        "score": 0.35,
+        "label": "积极",
+        "impact": "中",
+        "tags": [
+          "市场"
+        ],
+        "rationale": "命中金融语义：高开",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "稳定信号出现 五大A股主力联袂力挺",
+        "summary": "从目前的情况来看，A股本次回调主要是外部冲击的结果。 海外因素是主要催化剂。一方面，中东局势等地缘政治不确定性持续发酵，全球市场风险偏好普遍下行，主流股指集体承压，A股也难免受到波…",
+        "published": "2026-07-20 08:29:02",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202607203811956168.html",
+        "score": -0.46,
+        "label": "消极",
+        "impact": "中",
+        "tags": [
+          "资金面"
+        ],
+        "rationale": "命中金融语义：稳定、风险、承压",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "刷屏！大批A股公司 出手回购",
+        "summary": "7月19日晚，多家A股上市公司发布回购相关公告，引发市场热议。",
+        "published": "2026-07-20 00:39:27",
+        "source": "中国证券报",
+        "url": "http://finance.eastmoney.com/a/202607203811886243.html",
+        "score": 0.5,
+        "label": "积极",
+        "impact": "中",
+        "tags": [
+          "资本运作"
+        ],
+        "rationale": "命中金融语义：回购",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "华夏中证A股ETF开启认购",
+        "summary": "华夏中证A股ETF（561733）将于2026年7月20日至2026年7月31日进行发售，其中，现金募集上限20亿元，该基金的场内简称为中证A股，基金管理人为华夏基金，由陈国峰、刘…",
+        "published": "2026-07-20 09:33:00",
+        "source": "证券时报网",
+        "url": "http://finance.eastmoney.com/a/202607203812264545.html",
+        "score": 0.0,
+        "label": "中性",
+        "impact": "低",
+        "tags": [
+          "基本面"
+        ],
+        "rationale": "未发现显著方向性金融词汇",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "A股停牌提示：5股今日停牌",
+        "summary": "Wind数据显示，7月20日，超卓航科、瓦轴B、新芝生物等5只个股停牌。",
+        "published": "2026-07-20 09:06:21",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202607203811987384.html",
+        "score": 0.0,
+        "label": "中性",
+        "impact": "低",
+        "tags": [
+          "市场"
+        ],
+        "rationale": "未发现显著方向性金融词汇",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "上周80家A股上市公司实施回购",
+        "summary": "Wind数据显示，上周（7月12日至7月18日）共有80家A股上市公司实施回购，较去年同期增长56.86%；回购金额为23.80亿元，较去年同期增长109.88%。相比前一周（7月…",
+        "published": "2026-07-20 09:49:00",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202607203812347360.html",
+        "score": 0.86,
+        "label": "积极",
+        "impact": "高",
+        "tags": [
+          "资本运作"
+        ],
+        "rationale": "命中金融语义：增长、回购",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "超2000亿，抄底A股！",
+        "summary": "7月变盘，科技板块回调带动全市场下挫，本周（7月13日至17日）A股各大核心宽基指数悉数下跌。 大跌即大买，市场波动剧烈之时，资金借道宽基ETF大举抄底。",
+        "published": "2026-07-19 20:38:00",
+        "source": "中国基金报",
+        "url": "http://finance.eastmoney.com/a/202607193811968037.html",
+        "score": -0.5,
+        "label": "消极",
+        "impact": "中",
+        "tags": [
+          "市场"
+        ],
+        "rationale": "命中金融语义：下跌",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "A股“易中天”均大涨5%",
+        "summary": "20日，A股光模块板块高开，新易盛、中际旭创、天孚通信均涨超5%。 消息面上，新易盛预计上半年实现净利润70亿元-80亿元，同比增78%-103%。天孚通信预计上半年净利润同比增长…",
+        "published": "2026-07-20 09:36:00",
+        "source": "中新经纬",
+        "url": "http://finance.eastmoney.com/a/202607203812159176.html",
+        "score": 0.71,
+        "label": "积极",
+        "impact": "高",
+        "tags": [
+          "市场"
+        ],
+        "rationale": "命中金融语义：高开、增长",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "股价大跌后 多家A股公司出手回购",
+        "summary": "7月19日，多家A股上市公司发布公告称，拟回购公司股份。 其中，世运电路公告称，公司拟以2亿元至3亿元回购股份，用于实施员工持股计划或股权激励，回购价格不超过55元/股。",
+        "published": "2026-07-19 18:40:00",
+        "source": "中新经纬",
+        "url": "http://finance.eastmoney.com/a/202607193811848130.html",
+        "score": 0.5,
+        "label": "积极",
+        "impact": "中",
+        "tags": [
+          "资本运作"
+        ],
+        "rationale": "命中金融语义：回购",
+        "engine": "finance-lexicon-v1"
+      },
+      {
+        "title": "华泰证券：A股若有催化短期反弹概率上升",
+        "summary": "华泰证券研报认为，上周A股受全球科技资产去杠杆影响有所调整，但盘面结构性分化明显，情绪快速出清，更接近高位科技的拥挤交易出清而非系统性风险。",
+        "published": "2026-07-20 09:21:44",
+        "source": "中国证券报·中证金牛座",
+        "url": "http://finance.eastmoney.com/a/202607203812003968.html",
+        "score": -0.34,
+        "label": "消极",
+        "impact": "中",
+        "tags": [
+          "市场"
+        ],
+        "rationale": "命中金融语义：风险",
+        "engine": "finance-lexicon-v1"
+      }
+    ]
+  }
+}
