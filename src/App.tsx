@@ -586,24 +586,136 @@ function ScenarioSection() {
 }
 
 function MethodSection() {
-  const steps = [
-    { icon: Database, title: '数据时序对齐', text: 'OHLCV 与财经资讯按可获得时间统一对齐，确保所有输入满足当时点信息约束。' },
-    { icon: BrainCircuit, title: '多模态信号融合', text: '随机森林刻画价量结构，文本引擎输出事件方向、影响等级与证据标签。' },
-    { icon: ShieldCheck, title: '风险预算约束', text: '当置信水平下降、负面事件聚集或波动抬升时，系统主动收缩风险敞口。' },
-    { icon: FlaskConical, title: '样本外实证', text: '采用 70/30 时间切分、次日执行与成本约束，完整保留模型版本及实证结果。' },
+  const disciplines = [
+    {
+      code: '01', eyebrow: 'DATA INTEGRITY', title: '数据完整性与时间因果', icon: Database,
+      thesis: '任何收益曲线，都必须先通过信息可得性与时间边界审计。',
+      guardrail: '信息时点优先于模型精度',
+      items: [
+        { title: '多源时钟统一', text: 'K 线、盘口、资金流、宏观指标、公告与舆情统一时区；复权、停牌、涨跌停及跳空事件显式标记。' },
+        { title: '隔绝未来泄露', text: 't 时点特征仅使用当时已公开信息；特征窗口、预测时点、成交时点与标签区间相互隔离。' },
+        { title: '分层清洗降噪', text: '价格序列完成去趋势与波动率归一；异常毛刺隔离处理，但保留极端行情与黑天鹅样本。' },
+        { title: '覆盖市场状态', text: '按牛市、熊市与震荡市分层采样，并校正涨跌标签分布，降低单一行情依赖。' },
+      ],
+    },
+    {
+      code: '02', eyebrow: 'HYBRID INTELLIGENCE', title: '轻量化多模型融合', icon: BrainCircuit,
+      thesis: '结构化时序模型负责定量证据，轻量语义模型负责事件增量。',
+      guardrail: 'INT4 / INT8 · 毫秒级推理 · SHAP 归因',
+      items: [
+        { title: '结构化时序引擎', text: 'LightGBM、XGBoost 与轻量时序网络刻画价量、盘口和资金行为，保留低延迟与稳定解释能力。' },
+        { title: '财经语义引擎', text: '量化小模型提取新闻、公告与政策中的事件方向、可信度、影响等级及有效时域。' },
+        { title: '受控信号融合', text: '文本事件只在事实校验通过后修正量价信号；通过门控权重避免单一模态主导决策。' },
+        { title: '压缩与解释约束', text: '采用量化、蒸馏、剪枝与特征筛选控制复杂度，并以 SHAP 区分量价驱动与事件驱动。' },
+      ],
+    },
+    {
+      code: '03', eyebrow: 'OUT-OF-SAMPLE FIRST', title: '时序训练与样本外验证', icon: FlaskConical,
+      thesis: '研究目标不是解释已发生的历史，而是约束对未知未来的判断。',
+      guardrail: '禁止随机切分 · Walk-Forward 验证',
+      items: [
+        { title: '滚动时序验证', text: '训练、验证与测试严格按时间推进，模拟模型定期重训及逐日增量获取数据的真实过程。' },
+        { title: '多层抗过拟合', text: '限制因子数量与参数自由度，结合树模型正则、Dropout 及受限微调抑制历史记忆。' },
+        { title: '独立压力区间', text: '完整牛熊切换、流动性枯竭与极端波动区间不参与训练，单独用于尾部风险检验。' },
+        { title: '分层评价体系', text: '同时审阅 Sharpe、最大回撤、盈亏比、胜率、持仓稳定性及收益分布，不以准确率替代投资价值。' },
+      ],
+    },
+    {
+      code: '04', eyebrow: 'EXECUTION REALITY', title: '现实交易仿真与线上闭环', icon: Zap,
+      thesis: '预测只有经过执行约束、成本核算与仓位映射后，才构成可交易信号。',
+      guardrail: '次日执行 · 全成本核算 · 漂移监控',
+      items: [
+        { title: '高保真成交仿真', text: '统一计入手续费、滑点、冲击成本、涨跌停、停牌及流动性不足造成的成交限制。' },
+        { title: '信号到仓位映射', text: '设置单票上限、波动率降仓与多模态共振条件，禁止将方向预测直接等价为满仓指令。' },
+        { title: '实盘反馈回流', text: '每日回收委托、成交、滑点与盈亏数据，持续校准成本模型及训练样本。' },
+        { title: '预测漂移治理', text: '监控特征分布、命中率与风险调整收益变化，市场风格切换时自动触发降级或重训。' },
+      ],
+    },
+    {
+      code: '05', eyebrow: 'RISK OVERRIDES ALPHA', title: '风险优先与事实约束', icon: ShieldCheck,
+      thesis: '模型负责生成证据，风控拥有最终否决权；长期存活优先于短期命中。',
+      guardrail: 'Risk Gate 始终高于 Model Signal',
+      items: [
+        { title: '语义事实校验', text: '对新闻来源、政策原文与事件主体进行可信度评分及交叉验证，抑制幻觉与误读触发交易。' },
+        { title: '动态风险闸门', text: '净值回撤、行业集中度、隔夜风险及波动率触及阈值时，系统强制减仓或停止新增敞口。' },
+        { title: '尾部风险衰减', text: '极端事件降低模型置信权重并扩大不确定性区间，避免用常态分布解释肥尾冲击。' },
+        { title: '因子生命周期治理', text: '持续评估公开因子的拥挤度与衰减速度，优先保留低频、可验证且具信息增量的信号。' },
+      ],
+    },
   ]
+  const [activeDiscipline, setActiveDiscipline] = useState(0)
+  const active = disciplines[activeDiscipline]
+  const ActiveIcon = active.icon
+
   return (
     <section className="section method-section" id="method">
-      <SectionHeading number="05" kicker="SYSTEM DESIGN" title="轻量化架构，机构级研究纪律" text="构建可在个人计算环境运行、支持数据源替换，并可扩展至大模型与交易接口的系统化研究链路。" />
-      <div className="method-flow">
-        {steps.map((step, index) => {
-          const Icon = step.icon
-          return <motion.div className="method-step" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} key={step.title}><span className="step-index mono">0{index + 1}</span><div className="method-icon"><Icon size={20} /></div><h3>{step.title}</h3><p>{step.text}</p>{index < steps.length - 1 && <ChevronRight className="flow-arrow" size={20} />}</motion.div>
-        })}
+      <SectionHeading number="05" kicker="RESEARCH DISCIPLINE" title="先约束研究，再讨论预测" text="金融市场具有非平稳、高噪声、肥尾与对抗博弈属性。机器学习与大模型只能在严格的数据、验证、执行和风险边界内生成可用证据。" />
+      <motion.div className="market-reality" initial={false} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <div className="reality-statement">
+          <span className="mini-kicker">PRIOR ASSUMPTION / 市场先验</span>
+          <h3>模型不是答案，<em>而是约束条件下的证据生成器。</em></h3>
+        </div>
+        <div className="reality-tags" aria-label="金融市场底层约束">
+          {['非平稳', '高噪声', '肥尾分布', '交易摩擦', '信息边界', '对抗博弈'].map((label, index) => <span key={label}><i className="mono">0{index + 1}</i>{label}</span>)}
+        </div>
+      </motion.div>
+
+      <div className="discipline-shell">
+        <div className="discipline-rail" role="tablist" aria-label="五层研究约束">
+          {disciplines.map((discipline, index) => {
+            const Icon = discipline.icon
+            return (
+              <motion.button
+                type="button"
+                role="tab"
+                aria-selected={activeDiscipline === index}
+                className={activeDiscipline === index ? 'active' : ''}
+                onClick={() => setActiveDiscipline(index)}
+                whileHover={{ x: 3 }}
+                key={discipline.code}
+              >
+                {activeDiscipline === index && <motion.i className="discipline-active" layoutId="discipline-active" />}
+                <span className="discipline-code mono">{discipline.code}</span>
+                <span className="discipline-label"><small>{discipline.eyebrow}</small><strong>{discipline.title}</strong></span>
+                <Icon size={17} />
+              </motion.button>
+            )
+          })}
+        </div>
+
+        <div className="discipline-stage" role="tabpanel">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              className="discipline-detail"
+              key={active.code}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: .24, ease: 'easeOut' }}
+            >
+              <div className="discipline-head">
+                <div className="discipline-icon"><ActiveIcon size={22} /></div>
+                <div><span className="mini-kicker">PRIORITY {active.code} / {active.eyebrow}</span><h3>{active.title}</h3></div>
+              </div>
+              <p className="discipline-thesis">{active.thesis}</p>
+              <div className="discipline-checks">
+                {active.items.map((item, index) => (
+                  <motion.div initial={{ opacity: 0, x: 8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * .045 }} key={item.title}>
+                    <span className="check-index mono">0{index + 1}</span>
+                    <div><strong>{item.title}</strong><p>{item.text}</p></div>
+                    <Check size={15} />
+                  </motion.div>
+                ))}
+              </div>
+              <div className="discipline-guard"><ShieldCheck size={17} /><span>系统硬约束</span><strong>{active.guardrail}</strong></div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
+
       <div className="method-bottom">
         <div><span className="mini-kicker">MODEL CARD</span><h3>{snapshot.model.name}</h3><p>训练样本 {snapshot.model.train_samples.toLocaleString()} · 样本外 {snapshot.model.test_samples.toLocaleString()} · 预测窗口 {snapshot.model.horizon_days} 日</p></div>
-        <div className="method-tags"><span><Check size={13} /> 时序切分</span><span><Check size={13} /> 交易成本约束</span><span><Check size={13} /> 因子可解释性</span><span><Check size={13} /> 可复现快照</span></div>
+        <div className="method-tags"><span><Check size={13} /> 时序切分</span><span><Check size={13} /> 次日执行</span><span><Check size={13} /> 全成本约束</span><span><Check size={13} /> 因子可解释</span><span><Check size={13} /> 可复现快照</span></div>
         <button className="secondary-button" onClick={() => window.print()}><Download size={16} /> 生成研究简报</button>
       </div>
     </section>
