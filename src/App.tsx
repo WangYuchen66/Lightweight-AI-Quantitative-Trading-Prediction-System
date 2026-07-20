@@ -57,10 +57,10 @@ const moneyCn = (value: number) => value >= 1e8 ? `${(value / 1e8).toFixed(1)} �
 const spring = { type: 'spring' as const, stiffness: 110, damping: 18 }
 
 const scenarioMap = {
-  base: { name: '基准情景', icon: CircleGauge, probability: 0, returnShift: 0, exposure: 1, note: '公开信息与价格因子保持当前状态' },
-  policy: { name: '政策增量', icon: Sparkles, probability: 0.072, returnShift: 0.018, exposure: 1.18, note: '风险偏好回升，估值与量能因子同步改善' },
-  sentiment: { name: '舆情冲击', icon: Radio, probability: -0.108, returnShift: -0.025, exposure: 0.62, note: '负面事件聚集，舆情风险闸门主动降仓' },
-  liquidity: { name: '流动性收缩', icon: Activity, probability: -0.064, returnShift: -0.016, exposure: 0.74, note: '成交量下降、波动率上升，信号置信度衰减' },
+  base: { name: '基准情景', icon: CircleGauge, probability: 0, returnShift: 0, exposure: 1, note: '维持当前已观测的价格结构与信息条件' },
+  policy: { name: '政策增量', icon: Sparkles, probability: 0.072, returnShift: 0.018, exposure: 1.18, note: '政策预期改善，风险偏好与流动性因子同步修复' },
+  sentiment: { name: '舆情冲击', icon: Radio, probability: -0.108, returnShift: -0.025, exposure: 0.62, note: '负面事件密度上升，舆情约束触发风险敞口收缩' },
+  liquidity: { name: '流动性收缩', icon: Activity, probability: -0.064, returnShift: -0.016, exposure: 0.74, note: '成交活跃度回落且波动率抬升，信号置信水平下降' },
 }
 
 type ScenarioKey = keyof typeof scenarioMap
@@ -77,11 +77,11 @@ function Logo() {
 function Header() {
   const [open, setOpen] = useState(false)
   const nav = [
-    ['市场洞察', '#market'],
-    ['舆情雷达', '#sentiment'],
-    ['策略验证', '#backtest'],
-    ['情景实验', '#scenario'],
-    ['方法论', '#method'],
+    ['市场表征', '#market'],
+    ['舆情归因', '#sentiment'],
+    ['实证检验', '#backtest'],
+    ['情景分析', '#scenario'],
+    ['研究方法', '#method'],
   ]
   return (
     <header className="site-header">
@@ -130,22 +130,22 @@ function Hero() {
       <div className="hero-orbit orbit-two" />
       <div className="hero-copy">
         <motion.div className="eyebrow" initial={false} animate={{ opacity: 1, y: 0 }}>
-          <span><BrainCircuit size={14} /></span> 机器学习 × 大模型 × 量化研究
+          <span><BrainCircuit size={14} /></span> 多模态市场表征 · 系统化量化研究
         </motion.div>
         <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}>
-          让信号，先于<br /><span>叙事抵达。</span>
+          在不确定性中，<br /><span>提炼决策优势。</span>
         </motion.h1>
         <motion.p initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }}>
-          把价格、量能与财经文本压缩为一张可解释的决策卡。<br className="desktop-only" />不预测神话，只量化不确定性。
+          融合价量结构、风险因子与财经语义，形成可解释、可回溯、可验证的研究结论。<br className="desktop-only" />所有判断均以不确定性度量为前提。
         </motion.p>
         <motion.div className="hero-actions" initial={false} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
-          <a className="primary-button" href="#market">查看今日信号 <ArrowRight size={17} /></a>
-          <a className="text-button" href="#method">阅读方法论 <ChevronRight size={16} /></a>
+          <a className="primary-button" href="#market">进入研究工作台 <ArrowRight size={17} /></a>
+          <a className="text-button" href="#method">审阅研究框架 <ChevronRight size={16} /></a>
         </motion.div>
         <div className="trust-row">
-          <span><ShieldCheck size={15} /> 样本外验证</span>
-          <span><Fingerprint size={15} /> 信号可追溯</span>
-          <span><Database size={15} /> 公开数据源</span>
+          <span><ShieldCheck size={15} /> 严格样本外检验</span>
+          <span><Fingerprint size={15} /> 全链路信号溯源</span>
+          <span><Database size={15} /> 多源公开数据</span>
         </div>
       </div>
 
@@ -157,22 +157,22 @@ function Hero() {
         </div>
         <div className="signal-identity">
           <div>
-            <small>AI 决策</small>
+            <small>模型决策</small>
             <h2>{snapshot.signal.action}</h2>
           </div>
           <div className="signal-glyph"><TrendingUp size={31} /></div>
         </div>
         <div className="probability-rail">
-          <div className="rail-label"><span>上涨概率</span><strong>{(snapshot.signal.probability * 100).toFixed(1)}%</strong></div>
+          <div className="rail-label"><span>未来 5 日上行概率</span><strong>{(snapshot.signal.probability * 100).toFixed(1)}%</strong></div>
           <div className="rail"><motion.i initial={{ width: 0 }} animate={{ width: `${snapshot.signal.probability * 100}%` }} transition={{ duration: 1.1, delay: .45 }} /></div>
           <div className="rail-scale"><span>0</span><span>中性</span><span>100</span></div>
         </div>
         <div className="signal-stats">
-          <div><small>观察区间</small><strong>{number(snapshot.signal.targetLow)}—{number(snapshot.signal.targetHigh)}</strong></div>
-          <div><small>决策周期</small><strong>{snapshot.signal.horizon}</strong></div>
+          <div><small>模型观测区间</small><strong>{number(snapshot.signal.targetLow)}—{number(snapshot.signal.targetHigh)}</strong></div>
+          <div><small>预测时域</small><strong>{snapshot.signal.horizon}</strong></div>
         </div>
         <div className="signal-footer">
-          <span><ShieldCheck size={15} /> 风险闸门：{snapshot.signal.riskGate}</span>
+          <span><ShieldCheck size={15} /> 风险约束：{snapshot.signal.riskGate}</span>
           <span className="mono">CONF. {snapshot.signal.confidence}</span>
         </div>
       </motion.div>
@@ -337,7 +337,7 @@ function StockWorkbench() {
         </div>
       </div>
 
-      <div className="real-data-banner"><Radio size={14} /><span>真实 A 股行情</span><i />AKShare · 东方财富公开数据</div>
+      <div className="real-data-banner"><Radio size={14} /><span>A 股真实行情快照</span><i />AKShare · 东方财富公开数据</div>
       <div className="stock-chart" role="img" aria-label={`${stock.name}${mode === 'candle' ? '日 K 线' : '收盘走势'}，含20日和60日均线`}>
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={data} margin={{ top: 14, right: 8, bottom: 0, left: 2 }}>
@@ -378,9 +378,9 @@ function FactorPanel() {
       <div className="panel-title-row"><div><span className="mini-kicker">INDEX TIMING MODEL</span><h3>沪深300因子贡献</h3></div><button className="icon-button" aria-label="刷新模型信息"><RefreshCcw size={16} /></button></div>
       <div className="factor-score">
         <div className="score-ring" style={{ '--score': `${snapshot.signal.probability * 360}deg` } as React.CSSProperties}>
-          <div><strong>{(snapshot.signal.probability * 100).toFixed(1)}</strong><small>上涨概率</small></div>
+          <div><strong>{(snapshot.signal.probability * 100).toFixed(1)}</strong><small>5 日上行概率</small></div>
         </div>
-        <div><span>当前判断</span><strong>{snapshot.signal.action}</strong><small>{snapshot.model.name}</small></div>
+        <div><span>模型结论</span><strong>{snapshot.signal.action}</strong><small>{snapshot.model.name}</small></div>
       </div>
       <div className="factor-list">
         {factors.map((factor, index) => (
@@ -390,7 +390,7 @@ function FactorPanel() {
           </div>
         ))}
       </div>
-      <div className="audit-note"><Fingerprint size={15} /><p><strong>可审计说明</strong>贡献度来自随机森林不纯度下降；方向值是当前标准化前因子，不能单独解释为买卖建议。</p></div>
+      <div className="audit-note"><Fingerprint size={15} /><p><strong>模型解释口径</strong>贡献度基于随机森林不纯度下降计算；方向值为当前原始因子读数，不构成独立交易依据。</p></div>
     </div>
   )
 }
@@ -410,13 +410,13 @@ function MarketSection() {
   const m = snapshot.backtest.metrics
   return (
     <section className="section" id="market">
-      <SectionHeading number="01" kicker="MARKET INTELLIGENCE" title="一眼看清，信号从何而来" text="价格趋势、波动与量能共同投票；置信度不足时，系统明确选择不交易。" />
+      <SectionHeading number="01" kicker="MARKET INTELLIGENCE" title="多维市场表征与信号溯源" text="以价量结构、波动特征与成交行为构建联合判断；当证据强度不足时，风险预算自动收敛。" />
       <div className="dashboard-grid"><StockWorkbench /><FactorPanel /></div>
       <div className="metrics-grid">
-        <MetricCard icon={Target} label="样本外累计收益" value={pct(m.total_return)} meta={`${snapshot.backtest.testStart} 至 ${snapshot.backtest.testEnd}`} tone="good" />
-        <MetricCard icon={ShieldCheck} label="最大回撤" value={plainPct(m.max_drawdown)} meta="含双边 10bp 成本" tone="good" />
-        <MetricCard icon={CircleGauge} label="风险调整收益" value={m.sharpe.toFixed(2)} meta="年化 Sharpe" />
-        <MetricCard icon={Activity} label="市场暴露" value={plainPct(m.exposure)} meta={`${m.trades} 次仓位切换`} tone="warn" />
+        <MetricCard icon={Target} label="样本外累计回报" value={pct(m.total_return)} meta={`${snapshot.backtest.testStart} 至 ${snapshot.backtest.testEnd}`} tone="good" />
+        <MetricCard icon={ShieldCheck} label="最大净值回撤" value={plainPct(m.max_drawdown)} meta="计入 10bp 单边成本" tone="good" />
+        <MetricCard icon={CircleGauge} label="风险调整回报" value={m.sharpe.toFixed(2)} meta="年化 Sharpe" />
+        <MetricCard icon={Activity} label="平均市场敞口" value={plainPct(m.exposure)} meta={`${m.trades} 次仓位调整`} tone="warn" />
       </div>
     </section>
   )
@@ -429,7 +429,7 @@ function SentimentGauge() {
   return (
     <div className="sentiment-gauge card-surface">
       <span className="mini-kicker">NARRATIVE PULSE</span>
-      <h3>市场叙事温度</h3>
+      <h3>财经语义因子</h3>
       <div className="sentiment-dial">
         <div className="dial-arc" style={{ '--dial': `${(score + 1) * 90}deg` } as React.CSSProperties}><span /></div>
         <div className="dial-value"><strong>{score >= 0 ? '+' : ''}{score.toFixed(2)}</strong><span>{score > .15 ? '偏积极' : score < -.15 ? '偏消极' : '中性'}</span></div>
@@ -440,7 +440,7 @@ function SentimentGauge() {
         <div><i className="neu" style={{ width: `${neutral / total * 100}%` }} /><span>中性 {neutral}</span></div>
         <div><i className="neg" style={{ width: `${negative / total * 100}%` }} /><span>消极 {negative}</span></div>
       </div>
-      <div className="risk-gate"><ShieldCheck size={18} /><div><small>情绪风险闸门</small><strong>{snapshot.signal.riskGate}运行</strong></div><span>LIVE</span></div>
+      <div className="risk-gate"><ShieldCheck size={18} /><div><small>舆情风险约束</small><strong>{snapshot.signal.riskGate}执行</strong></div><span>LIVE</span></div>
     </div>
   )
 }
@@ -449,7 +449,7 @@ function NewsFeed() {
   const [selected, setSelected] = useState<NewsItem | null>(snapshot.sentiment.news[0] ?? null)
   return (
     <div className="news-panel card-surface">
-      <div className="panel-title-row"><div><span className="mini-kicker">EVIDENCE STREAM</span><h3>事件证据流</h3></div><span className="source-note">近 {snapshot.sentiment.news.length} 条公开资讯</span></div>
+      <div className="panel-title-row"><div><span className="mini-kicker">EVIDENCE STREAM</span><h3>事件证据链</h3></div><span className="source-note">{snapshot.sentiment.news.length} 条已溯源资讯</span></div>
       {snapshot.sentiment.news.length ? (
         <div className="news-list">
           {snapshot.sentiment.news.slice(0, 6).map((item, index) => (
@@ -460,13 +460,13 @@ function NewsFeed() {
             </button>
           ))}
         </div>
-      ) : <div className="empty-state">当前快照未包含新闻，量化信号仍可独立运行。</div>}
+      ) : <div className="empty-state">当前研究快照暂无可用资讯；量化因子链路保持独立运行。</div>}
       <AnimatePresence mode="wait">
         {selected && (
           <motion.div className="news-detail" key={selected.title} initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
-            <div><Sparkles size={16} /><span>AI 归因</span></div>
-            <p>{selected.rationale}；预期影响强度为“{selected.impact}”。</p>
-            <a href={selected.url} target="_blank" rel="noreferrer">查看原文 <ExternalLink size={13} /></a>
+            <div><Sparkles size={16} /><span>语义归因</span></div>
+            <p>{selected.rationale}；事件影响等级评估为“{selected.impact}”。</p>
+            <a href={selected.url} target="_blank" rel="noreferrer">查阅原始来源 <ExternalLink size={13} /></a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -477,7 +477,7 @@ function NewsFeed() {
 function SentimentSection() {
   return (
     <section className="section" id="sentiment">
-      <SectionHeading number="02" kicker="SENTIMENT RADAR" title="把噪声，变成可追溯的证据" text="文本引擎抽取方向、影响与风险标签；每一个判断都保留原始来源，不让大模型成为黑箱。" />
+      <SectionHeading number="02" kicker="SENTIMENT RADAR" title="从信息流中识别可验证的定价线索" text="文本引擎提取事件方向、影响等级与风险标签，并保留原始来源，确保模型结论具备完整审计路径。" />
       <div className="sentiment-grid"><SentimentGauge /><NewsFeed /></div>
     </section>
   )
@@ -493,7 +493,7 @@ function BacktestSection() {
   const m = snapshot.backtest.metrics
   return (
     <section className="section" id="backtest">
-      <SectionHeading number="03" kicker="OUT-OF-SAMPLE LAB" title="用未知数据，检验已知想法" text="训练集与测试集按时间切分，信号滞后一日执行并计入交易成本；结果不好看时，也完整展示。" />
+      <SectionHeading number="03" kicker="OUT-OF-SAMPLE LAB" title="以样本外证据约束模型判断" text="基于时间序列完成训练与测试隔离，采用次日执行并计入交易成本；所有结果均按统一口径如实呈现。" />
       <div className="backtest-card card-surface">
         <div className="backtest-head">
           <div><span className="mini-kicker">WALK-FORWARD RESULT</span><h3>策略净值与风险轨迹</h3><p>{snapshot.backtest.testStart} — {snapshot.backtest.testEnd} · 初始净值 100</p></div>
@@ -526,13 +526,13 @@ function BacktestSection() {
             </ResponsiveContainer>
           </div>
           <div className="result-sheet">
-            <div className="result-row hero-result"><span>样本外累计</span><strong>{pct(m.total_return)}</strong><small>基准 {pct(m.benchmark_return)}</small></div>
-            <div className="result-row"><span>最大回撤</span><strong>{plainPct(m.max_drawdown)}</strong><small>资金保护优先</small></div>
-            <div className="result-row"><span>胜率 / 暴露</span><strong>{plainPct(m.win_rate)} <em>/</em> {plainPct(m.exposure)}</strong><small>低频择时</small></div>
-            <div className="result-row"><span>测试 AUC</span><strong>{snapshot.model.test_auc.toFixed(3)}</strong><small>{snapshot.model.test_auc >= .5 ? '存在弱预测信息' : '当前无稳定预测优势'}</small></div>
+            <div className="result-row hero-result"><span>样本外累计回报</span><strong>{pct(m.total_return)}</strong><small>同期基准 {pct(m.benchmark_return)}</small></div>
+            <div className="result-row"><span>最大净值回撤</span><strong>{plainPct(m.max_drawdown)}</strong><small>风险预算优先</small></div>
+            <div className="result-row"><span>胜率 / 平均敞口</span><strong>{plainPct(m.win_rate)} <em>/</em> {plainPct(m.exposure)}</strong><small>低换手择时框架</small></div>
+            <div className="result-row"><span>样本外 AUC</span><strong>{snapshot.model.test_auc.toFixed(3)}</strong><small>{snapshot.model.test_auc >= .5 ? '呈现有限预测信息' : '未形成稳定预测优势'}</small></div>
           </div>
         </div>
-        <div className="honesty-bar"><ShieldCheck size={17} /><p><strong>结果解读：</strong>本期模型显著降低市场暴露与回撤，但收益和 AUC 未超过基准；因此当前产品输出“观望”，不把低置信预测包装为确定机会。</p></div>
+        <div className="honesty-bar"><ShieldCheck size={17} /><p><strong>实证结论：</strong>本期模型有效降低市场敞口与回撤，但累计回报及 AUC 未显著优于基准。当前维持“观望”信号，以避免在低置信区间承担非必要风险敞口。</p></div>
       </div>
     </section>
   )
@@ -547,27 +547,27 @@ function ScenarioSection() {
   const annualCostDrag = Math.max(0, cost - 10) / 10_000 * snapshot.backtest.metrics.trades / 6.2
   const adjustedAnnual = snapshot.backtest.metrics.annualized_return - annualCostDrag
   const scenarioBars = [
-    { label: '方向概率', value: adjustedProbability * 100, max: 100 },
-    { label: '建议仓位', value: Math.min(100, snapshot.backtest.metrics.exposure * active.exposure * 100), max: 100 },
-    { label: '5日隐含收益', value: Math.max(0, 50 + impliedReturn * 1000), max: 100 },
+    { label: '上行概率', value: adjustedProbability * 100, max: 100 },
+    { label: '风险敞口', value: Math.min(100, snapshot.backtest.metrics.exposure * active.exposure * 100), max: 100 },
+    { label: '5日隐含回报', value: Math.max(0, 50 + impliedReturn * 1000), max: 100 },
   ]
 
   return (
     <section className="section" id="scenario">
-      <SectionHeading number="04" kicker="COUNTERFACTUAL ENGINE" title="不要猜未来，先压力测试未来" text="改变政策、情绪与流动性假设，观察信号概率、仓位和成本敏感性如何联动。" />
+      <SectionHeading number="04" kicker="COUNTERFACTUAL ENGINE" title="多重市场状态下的组合压力检验" text="通过调整政策、舆情与流动性假设，评估信号概率、风险敞口及交易成本的联动响应。" />
       <div className="scenario-shell">
         <div className="scenario-controls">
-          <div className="control-group"><span className="mini-kicker">选择市场状态</span><div className="scenario-buttons">{(Object.keys(scenarioMap) as ScenarioKey[]).map(key => { const Icon = scenarioMap[key].icon; return <button className={scenario === key ? 'active' : ''} onClick={() => setScenario(key)} key={key}><Icon size={16} />{scenarioMap[key].name}</button> })}</div></div>
+          <div className="control-group"><span className="mini-kicker">市场状态假设</span><div className="scenario-buttons">{(Object.keys(scenarioMap) as ScenarioKey[]).map(key => { const Icon = scenarioMap[key].icon; return <button className={scenario === key ? 'active' : ''} onClick={() => setScenario(key)} key={key}><Icon size={16} />{scenarioMap[key].name}</button> })}</div></div>
           <div className="cost-control"><div><span>单边交易成本</span><strong className="mono">{cost} BP</strong></div><input type="range" min="0" max="50" step="5" value={cost} onChange={event => setCost(Number(event.target.value))} aria-label="单边交易成本" /><div className="range-label"><span>0</span><span>25</span><span>50</span></div></div>
         </div>
         <div className="scenario-output">
           <AnimatePresence mode="wait">
             <motion.div className="scenario-summary" key={scenario} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}>
               <div className="scenario-icon"><active.icon size={24} /></div>
-              <span>当前运行 / {active.name}</span>
-              <h3>{adjustedProbability >= .58 ? '风险预算可适度上调' : adjustedProbability < .44 ? '触发防守型降仓' : '等待更多方向确认'}</h3>
+              <span>情景推演 / {active.name}</span>
+              <h3>{adjustedProbability >= .58 ? '风险预算具备上调空间' : adjustedProbability < .44 ? '风险约束触发敞口收缩' : '方向性证据尚不充分'}</h3>
               <p>{active.note}</p>
-              <div className="scenario-values"><div><small>方向概率</small><strong>{(adjustedProbability * 100).toFixed(1)}%</strong></div><div><small>5日隐含收益</small><strong className={impliedReturn >= 0 ? 'up' : 'down'}>{pct(impliedReturn)}</strong></div><div><small>成本后年化</small><strong>{pct(adjustedAnnual)}</strong></div></div>
+              <div className="scenario-values"><div><small>上行概率</small><strong>{(adjustedProbability * 100).toFixed(1)}%</strong></div><div><small>5 日隐含回报</small><strong className={impliedReturn >= 0 ? 'up' : 'down'}>{pct(impliedReturn)}</strong></div><div><small>成本调整后年化</small><strong>{pct(adjustedAnnual)}</strong></div></div>
             </motion.div>
           </AnimatePresence>
           <div className="scenario-bars" aria-label="情景变量结果">
@@ -587,14 +587,14 @@ function ScenarioSection() {
 
 function MethodSection() {
   const steps = [
-    { icon: Database, title: '数据对齐', text: 'OHLCV 与财经资讯按可获得时间对齐，避免把未来信息泄漏进训练集。' },
-    { icon: BrainCircuit, title: '双引擎融合', text: '随机森林学习价格因子；文本引擎输出方向、影响、期限与证据标签。' },
-    { icon: ShieldCheck, title: '风险闸门', text: '低置信度、负面事件聚集或波动抬升时，仓位自动收缩至现金。' },
-    { icon: FlaskConical, title: '样本外验证', text: '按时间 70/30 切分，次日执行、计入成本，保留失败结果与模型版本。' },
+    { icon: Database, title: '数据时序对齐', text: 'OHLCV 与财经资讯按可获得时间统一对齐，确保所有输入满足当时点信息约束。' },
+    { icon: BrainCircuit, title: '多模态信号融合', text: '随机森林刻画价量结构，文本引擎输出事件方向、影响等级与证据标签。' },
+    { icon: ShieldCheck, title: '风险预算约束', text: '当置信水平下降、负面事件聚集或波动抬升时，系统主动收缩风险敞口。' },
+    { icon: FlaskConical, title: '样本外实证', text: '采用 70/30 时间切分、次日执行与成本约束，完整保留模型版本及实证结果。' },
   ]
   return (
     <section className="section method-section" id="method">
-      <SectionHeading number="05" kicker="SYSTEM DESIGN" title="轻量，不意味着轻率" text="一条可在个人电脑运行、可替换数据源、可接入真实大模型与交易接口的研究链路。" />
+      <SectionHeading number="05" kicker="SYSTEM DESIGN" title="轻量化架构，机构级研究纪律" text="构建可在个人计算环境运行、支持数据源替换，并可扩展至大模型与交易接口的系统化研究链路。" />
       <div className="method-flow">
         {steps.map((step, index) => {
           const Icon = step.icon
@@ -603,8 +603,8 @@ function MethodSection() {
       </div>
       <div className="method-bottom">
         <div><span className="mini-kicker">MODEL CARD</span><h3>{snapshot.model.name}</h3><p>训练样本 {snapshot.model.train_samples.toLocaleString()} · 样本外 {snapshot.model.test_samples.toLocaleString()} · 预测窗口 {snapshot.model.horizon_days} 日</p></div>
-        <div className="method-tags"><span><Check size={13} /> 时间切分</span><span><Check size={13} /> 成本建模</span><span><Check size={13} /> 可解释因子</span><span><Check size={13} /> 离线快照</span></div>
-        <button className="secondary-button" onClick={() => window.print()}><Download size={16} /> 导出研究简报</button>
+        <div className="method-tags"><span><Check size={13} /> 时序切分</span><span><Check size={13} /> 交易成本约束</span><span><Check size={13} /> 因子可解释性</span><span><Check size={13} /> 可复现快照</span></div>
+        <button className="secondary-button" onClick={() => window.print()}><Download size={16} /> 生成研究简报</button>
       </div>
     </section>
   )
@@ -613,8 +613,8 @@ function MethodSection() {
 function Footer() {
   return (
     <footer>
-      <div className="footer-main"><Logo /><p>AI-native quantitative intelligence<br />for disciplined decisions.</p><div className="footer-links"><a href="#market">市场洞察</a><a href="#sentiment">舆情雷达</a><a href="#backtest">策略验证</a><a href="#method">方法论</a></div></div>
-      <div className="disclaimer"><ShieldCheck size={15} /><p>本项目仅用于课程实践与量化研究展示，不构成任何投资建议。历史回测不代表未来表现；公开数据可能存在延迟、缺失或修订。</p><span className="mono">NEXUS ALPHA / 2026</span></div>
+      <div className="footer-main"><Logo /><p>AI-native quantitative intelligence<br />for disciplined decisions.</p><div className="footer-links"><a href="#market">市场表征</a><a href="#sentiment">舆情归因</a><a href="#backtest">实证检验</a><a href="#method">研究方法</a></div></div>
+      <div className="disclaimer"><ShieldCheck size={15} /><p>本系统仅用于课程实践与量化研究，不构成投资建议或收益承诺。历史实证不代表未来表现；公开数据可能存在延迟、缺失或修订。</p><span className="mono">NEXUS ALPHA / 2026</span></div>
     </footer>
   )
 }
