@@ -41,6 +41,44 @@ export interface CurvePoint {
   drawdown: number
 }
 
+export interface StockCandle {
+  date: string
+  fullDate: string
+  open: number
+  close: number
+  high: number
+  low: number
+  range: [number, number]
+  ma20: number | null
+  ma60: number | null
+  volume: number
+}
+
+export interface StockAsset {
+  id: string
+  symbol: string
+  name: string
+  code: string
+  sector: string
+  price: number
+  open: number
+  high: number
+  low: number
+  change: number
+  changeAmount: number
+  volume: number
+  amount: number
+  turnover: number
+  high52: number
+  low52: number
+  ma20: number
+  ma60: number
+  volumeRatio: number
+  asOf: string
+  adjustment: string
+  chart: StockCandle[]
+}
+
 export interface Snapshot {
   meta: {
     product: string
@@ -49,6 +87,7 @@ export interface Snapshot {
     mode: string
   }
   market: MarketAsset[]
+  stocks: StockAsset[]
   signal: {
     assetId: string
     action: string
@@ -104,4 +143,3 @@ export interface Snapshot {
     news: NewsItem[]
   }
 }
-

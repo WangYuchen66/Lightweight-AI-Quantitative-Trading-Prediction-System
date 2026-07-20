@@ -45,13 +45,14 @@ import {
   YAxis,
 } from 'recharts'
 import snapshotData from './data/snapshot.json'
-import type { ChartPoint, NewsItem, Snapshot } from './types'
+import type { ChartPoint, NewsItem, Snapshot, StockAsset, StockCandle } from './types'
 
 const snapshot = snapshotData as Snapshot
 
 const pct = (value: number, digits = 1) => `${value >= 0 ? '+' : ''}${(value * 100).toFixed(digits)}%`
 const plainPct = (value: number, digits = 1) => `${(value * 100).toFixed(digits)}%`
 const number = (value: number) => new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 2 }).format(value)
+const moneyCn = (value: number) => value >= 1e8 ? `${(value / 1e8).toFixed(1)} 亿` : `${(value / 1e4).toFixed(0)} 万`
 
 const spring = { type: 'spring' as const, stiffness: 110, damping: 18 }
 
@@ -260,12 +261,121 @@ function MarketChart() {
   )
 }
 
+type CandleShapeProps = {
+  x?: number
+  y?: number
+  width?: number
+  height?: number
+  payload?: StockCandle
+}
+
+function CandleShape({ x = 0, y = 0, width = 0, height = 0, payload }: CandleShapeProps) {
+  if (!payload) return null
+  const spread = Math.max(payload.high - payload.low, .0001)
+  const rising = payload.close >= payload.open
+  const color = rising ? '#d3ff69' : '#ff806d'
+  const bodyTop = y + ((payload.high - Math.max(payload.open, payload.close)) / spread) * height
+  const bodyHeight = Math.max(2, (Math.abs(payload.close - payload.open) / spread) * height)
+  const center = x + width / 2
+  return (
+    <g aria-hidden="true">
+      <line x1={center} x2={center} y1={y} y2={y + height} stroke={color} strokeWidth={1} opacity={.9} />
+      <rect x={x + Math.max(1, width * .16)} y={bodyTop} width={Math.max(2, width * .68)} height={bodyHeight} rx={1} fill={rising ? color : 'rgba(255,128,109,.22)'} stroke={color} />
+    </g>
+  )
+}
+
+function StockTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload?: StockCandle }> }) {
+  const row = payload?.[0]?.payload
+  if (!active || !row) return null
+  const rising = row.close >= row.open
+  return (
+    <div className="stock-tooltip">
+      <div className="stock-tooltip-date"><span>{row.fullDate}</span><em className={rising ? 'up' : 'down'}>{rising ? '上涨' : '下跌'}</em></div>
+      <div className="ohlc-grid"><span>开 <strong>{row.open.toFixed(2)}</strong></span><span>高 <strong>{row.high.toFixed(2)}</strong></span><span>收 <strong>{row.close.toFixed(2)}</strong></span><span>低 <strong>{row.low.toFixed(2)}</strong></span></div>
+      <div className="tooltip-volume">成交量 <strong>{row.volume.toFixed(1)} 万手</strong></div>
+    </div>
+  )
+}
+
+function StockWorkbench() {
+  const [stockId, setStockId] = useState(snapshot.stocks[0]?.id ?? '')
+  const [range, setRange] = useState(60)
+  const [mode, setMode] = useState<'candle' | 'trend'>('candle')
+  const stock = snapshot.stocks.find(item => item.id === stockId) ?? snapshot.stocks[0]
+  const data = useMemo(() => stock.chart.slice(-range), [stock, range])
+  const domain = useMemo(() => {
+    const lows = data.map(item => item.low)
+    const highs = data.map(item => item.high)
+    return [Math.min(...lows) * .985, Math.max(...highs) * 1.015]
+  }, [data])
+  const yearPosition = Math.max(0, Math.min(100, (stock.price - stock.low52) / Math.max(stock.high52 - stock.low52, .01) * 100))
+
+  return (
+    <div className="stock-workbench card-surface">
+      <div className="stock-tabs" role="group" aria-label="选择真实股票">
+        {snapshot.stocks.map(item => (
+          <button className={item.id === stock.id ? 'active' : ''} onClick={() => setStockId(item.id)} aria-pressed={item.id === stock.id} key={item.id}>
+            {item.id === stock.id && <motion.span className="active-stock-bg" layoutId="active-stock" transition={spring} />}
+            <span><strong>{item.name}</strong><small>{item.code}</small></span>
+            <em className={item.change >= 0 ? 'up' : 'down'}>{pct(item.change, 2)}</em>
+          </button>
+        ))}
+      </div>
+
+      <div className="stock-toolbar">
+        <AnimatePresence mode="wait">
+          <motion.div className="stock-identity" key={stock.id} initial={false} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 8 }}>
+            <div className="stock-avatar">{stock.name.slice(0, 1)}</div>
+            <div><div className="stock-name-line"><h3>{stock.name}</h3><span>{stock.sector}</span></div><p>{stock.code} · {stock.adjustment}日线 · 数据截至 {stock.asOf}</p></div>
+          </motion.div>
+        </AnimatePresence>
+        <div className="stock-price"><strong>{number(stock.price)}</strong><span className={stock.change >= 0 ? 'up' : 'down'}>{stock.change >= 0 ? <ArrowUpRight size={17} /> : <ArrowDownRight size={17} />}{pct(stock.change, 2)} <em>{stock.changeAmount >= 0 ? '+' : ''}{stock.changeAmount.toFixed(2)}</em></span></div>
+        <div className="stock-view-controls">
+          <div className="view-toggle"><button className={mode === 'candle' ? 'active' : ''} onClick={() => setMode('candle')}>K 线</button><button className={mode === 'trend' ? 'active' : ''} onClick={() => setMode('trend')}>走势</button></div>
+          <div className="range-tabs">{[20, 60, 120].map(value => <button className={range === value ? 'active' : ''} onClick={() => setRange(value)} key={value}>{value === 20 ? '1M' : value === 60 ? '3M' : '6M'}</button>)}</div>
+        </div>
+      </div>
+
+      <div className="real-data-banner"><Radio size={14} /><span>真实 A 股行情</span><i />AKShare · 东方财富公开数据</div>
+      <div className="stock-chart" role="img" aria-label={`${stock.name}${mode === 'candle' ? '日 K 线' : '收盘走势'}，含20日和60日均线`}>
+        <ResponsiveContainer width="100%" height="100%">
+          <ComposedChart data={data} margin={{ top: 14, right: 8, bottom: 0, left: 2 }}>
+            <defs><linearGradient id="stockTrendFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#d3ff69" stopOpacity=".18" /><stop offset="1" stopColor="#d3ff69" stopOpacity="0" /></linearGradient></defs>
+            <CartesianGrid stroke="rgba(255,255,255,.065)" vertical={false} />
+            <XAxis dataKey="date" axisLine={false} tickLine={false} minTickGap={35} tick={{ fill: '#94a29b', fontSize: 12, fontFamily: 'DM Mono' }} />
+            <YAxis domain={domain} axisLine={false} tickLine={false} width={64} tick={{ fill: '#94a29b', fontSize: 12, fontFamily: 'DM Mono' }} tickFormatter={value => Number(value).toFixed(stock.price > 100 ? 0 : 1)} />
+            <Tooltip content={<StockTooltip />} cursor={{ stroke: 'rgba(211,255,105,.25)', strokeDasharray: '4 4' }} />
+            {mode === 'candle' ? <Bar dataKey="range" shape={<CandleShape />} isAnimationActive={false} /> : <Area type="monotone" dataKey="close" stroke="#d3ff69" strokeWidth={2.2} fill="url(#stockTrendFill)" dot={false} isAnimationActive={false} />}
+            <Line type="monotone" dataKey="ma20" stroke="#7ee7c6" strokeWidth={1.3} dot={false} isAnimationActive={false} />
+            <Line type="monotone" dataKey="ma60" stroke="#9a8cff" strokeWidth={1.1} strokeDasharray="4 4" dot={false} isAnimationActive={false} />
+          </ComposedChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="volume-chart" role="img" aria-label={`${stock.name}成交量`}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={{ top: 0, right: 8, bottom: 0, left: 67 }}>
+            <Bar dataKey="volume" isAnimationActive={false}>{data.map((item, index) => <Cell fill={item.close >= item.open ? 'rgba(211,255,105,.38)' : 'rgba(255,128,109,.38)'} key={index} />)}</Bar>
+          </BarChart>
+        </ResponsiveContainer>
+        <span>VOL / 万手</span>
+      </div>
+      <div className="stock-stats">
+        <div><span>今开 / 最高</span><strong>{stock.open.toFixed(2)} <em>/</em> {stock.high.toFixed(2)}</strong></div>
+        <div><span>成交额 / 换手</span><strong>{moneyCn(stock.amount)} <em>/</em> {plainPct(stock.turnover, 2)}</strong></div>
+        <div><span>量比 / MA20</span><strong>{stock.volumeRatio.toFixed(2)} <em>/</em> {stock.ma20.toFixed(2)}</strong></div>
+        <div className="year-range"><span>52 周位置</span><div><i style={{ left: `${yearPosition}%` }} /></div><small>{stock.low52.toFixed(0)}—{stock.high52.toFixed(0)}</small></div>
+      </div>
+    </div>
+  )
+}
+
 function FactorPanel() {
   const factors = snapshot.model.feature_importance.slice(0, 6)
   const max = Math.max(...factors.map(item => item.importance))
   return (
     <div className="factor-panel card-surface">
-      <div className="panel-title-row"><div><span className="mini-kicker">MODEL TRACE</span><h3>因子贡献</h3></div><button className="icon-button" aria-label="刷新模型信息"><RefreshCcw size={16} /></button></div>
+      <div className="panel-title-row"><div><span className="mini-kicker">INDEX TIMING MODEL</span><h3>沪深300因子贡献</h3></div><button className="icon-button" aria-label="刷新模型信息"><RefreshCcw size={16} /></button></div>
       <div className="factor-score">
         <div className="score-ring" style={{ '--score': `${snapshot.signal.probability * 360}deg` } as React.CSSProperties}>
           <div><strong>{(snapshot.signal.probability * 100).toFixed(1)}</strong><small>上涨概率</small></div>
@@ -301,7 +411,7 @@ function MarketSection() {
   return (
     <section className="section" id="market">
       <SectionHeading number="01" kicker="MARKET INTELLIGENCE" title="一眼看清，信号从何而来" text="价格趋势、波动与量能共同投票；置信度不足时，系统明确选择不交易。" />
-      <div className="dashboard-grid"><MarketChart /><FactorPanel /></div>
+      <div className="dashboard-grid"><StockWorkbench /><FactorPanel /></div>
       <div className="metrics-grid">
         <MetricCard icon={Target} label="样本外累计收益" value={pct(m.total_return)} meta={`${snapshot.backtest.testStart} 至 ${snapshot.backtest.testEnd}`} tone="good" />
         <MetricCard icon={ShieldCheck} label="最大回撤" value={plainPct(m.max_drawdown)} meta="含双边 10bp 成本" tone="good" />
