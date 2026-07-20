@@ -130,17 +130,17 @@ function Hero() {
       <div className="hero-orbit orbit-two" />
       <div className="hero-copy">
         <motion.div className="eyebrow" initial={false} animate={{ opacity: 1, y: 0 }}>
-          <span><BrainCircuit size={14} /></span> 多模态市场表征 · 系统化量化研究
+          <span><BrainCircuit size={14} /></span> 多模态因子研究 · 风险约束决策
         </motion.div>
         <motion.h1 initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}>
-          在不确定性中，<br /><span>提炼决策优势。</span>
+          面向非平稳市场，<br /><span>多模态量化研究。</span>
         </motion.h1>
         <motion.p initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }}>
-          融合价量结构、风险因子与财经语义，形成可解释、可回溯、可验证的研究结论。<br className="desktop-only" />所有判断均以不确定性度量为前提。
+          将价量结构、风险因子与财经语义映射为可解释、可回溯、可检验的研究信号，<br className="desktop-only" />并以信息边界和不确定性度量约束结论强度。
         </motion.p>
         <motion.div className="hero-actions" initial={false} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
-          <a className="primary-button" href="#market">进入研究工作台 <ArrowRight size={17} /></a>
-          <a className="text-button" href="#method">审阅研究框架 <ChevronRight size={16} /></a>
+          <a className="primary-button" href="#market">查看市场研究 <ArrowRight size={17} /></a>
+          <a className="text-button" href="#method">研究方法与边界 <ChevronRight size={16} /></a>
         </motion.div>
         <div className="trust-row">
           <span><ShieldCheck size={15} /> 严格样本外检验</span>
@@ -390,7 +390,7 @@ function FactorPanel() {
           </div>
         ))}
       </div>
-      <div className="audit-note"><Fingerprint size={15} /><p><strong>模型解释口径</strong>贡献度基于随机森林不纯度下降计算；方向值为当前原始因子读数，不构成独立交易依据。</p></div>
+      <div className="audit-note"><Fingerprint size={17} /><p><strong>因子贡献说明</strong>贡献度采用随机森林的平均不纯度下降估计；方向值对应最新观测期的标准化因子暴露。两者用于解释模型决策来源，不应视为独立的收益预测。</p></div>
     </div>
   )
 }
@@ -589,8 +589,8 @@ function MethodSection() {
   const disciplines = [
     {
       code: '01', eyebrow: 'DATA INTEGRITY', title: '数据完整性与时间因果', icon: Database,
-      thesis: '任何收益曲线，都必须先通过信息可得性与时间边界审计。',
-      guardrail: '信息时点优先于模型精度',
+      thesis: '研究结论成立的前提，是所有输入均满足当时点可得性并通过时间边界审计。',
+      guardrail: '无法确认可得时点的特征不得进入训练与回测',
       items: [
         { title: '多源时钟统一', text: 'K 线、盘口、资金流、宏观指标、公告与舆情统一时区；复权、停牌、涨跌停及跳空事件显式标记。' },
         { title: '隔绝未来泄露', text: 't 时点特征仅使用当时已公开信息；特征窗口、预测时点、成交时点与标签区间相互隔离。' },
@@ -600,8 +600,8 @@ function MethodSection() {
     },
     {
       code: '02', eyebrow: 'HYBRID INTELLIGENCE', title: '轻量化多模型融合', icon: BrainCircuit,
-      thesis: '结构化时序模型负责定量证据，轻量语义模型负责事件增量。',
-      guardrail: 'INT4 / INT8 · 毫秒级推理 · SHAP 归因',
+      thesis: '结构化模型刻画价量与资金行为，轻量语义模型补充经事实核验的事件信息。',
+      guardrail: '模型压缩、推理延迟与归因稳定性均需独立验证',
       items: [
         { title: '结构化时序引擎', text: 'LightGBM、XGBoost 与轻量时序网络刻画价量、盘口和资金行为，保留低延迟与稳定解释能力。' },
         { title: '财经语义引擎', text: '量化小模型提取新闻、公告与政策中的事件方向、可信度、影响等级及有效时域。' },
@@ -611,8 +611,8 @@ function MethodSection() {
     },
     {
       code: '03', eyebrow: 'OUT-OF-SAMPLE FIRST', title: '时序训练与样本外验证', icon: FlaskConical,
-      thesis: '研究目标不是解释已发生的历史，而是约束对未知未来的判断。',
-      guardrail: '禁止随机切分 · Walk-Forward 验证',
+      thesis: '模型选择与参数评估仅依据历史可用样本，最终结论以独立样本外表现为准。',
+      guardrail: '训练、验证与测试必须严格按时间顺序推进',
       items: [
         { title: '滚动时序验证', text: '训练、验证与测试严格按时间推进，模拟模型定期重训及逐日增量获取数据的真实过程。' },
         { title: '多层抗过拟合', text: '限制因子数量与参数自由度，结合树模型正则、Dropout 及受限微调抑制历史记忆。' },
@@ -622,8 +622,8 @@ function MethodSection() {
     },
     {
       code: '04', eyebrow: 'EXECUTION REALITY', title: '现实交易仿真与线上闭环', icon: Zap,
-      thesis: '预测只有经过执行约束、成本核算与仓位映射后，才构成可交易信号。',
-      guardrail: '次日执行 · 全成本核算 · 漂移监控',
+      thesis: '方向概率经成交约束、成本核算与仓位映射后，方可转换为组合层决策变量。',
+      guardrail: '次日成交、显式成本与容量限制纳入统一回测口径',
       items: [
         { title: '高保真成交仿真', text: '统一计入手续费、滑点、冲击成本、涨跌停、停牌及流动性不足造成的成交限制。' },
         { title: '信号到仓位映射', text: '设置单票上限、波动率降仓与多模态共振条件，禁止将方向预测直接等价为满仓指令。' },
@@ -633,8 +633,8 @@ function MethodSection() {
     },
     {
       code: '05', eyebrow: 'RISK OVERRIDES ALPHA', title: '风险优先与事实约束', icon: ShieldCheck,
-      thesis: '模型负责生成证据，风控拥有最终否决权；长期存活优先于短期命中。',
-      guardrail: 'Risk Gate 始终高于 Model Signal',
+      thesis: '任何方向性模型输出均不得绕过事实核验、风险预算与组合限额。',
+      guardrail: '风险阈值触发结果覆盖方向性模型输出',
       items: [
         { title: '语义事实校验', text: '对新闻来源、政策原文与事件主体进行可信度评分及交叉验证，抑制幻觉与误读触发交易。' },
         { title: '动态风险闸门', text: '净值回撤、行业集中度、隔夜风险及波动率触及阈值时，系统强制减仓或停止新增敞口。' },
@@ -649,11 +649,11 @@ function MethodSection() {
 
   return (
     <section className="section method-section" id="method">
-      <SectionHeading number="05" kicker="RESEARCH DISCIPLINE" title="先约束研究，再讨论预测" text="金融市场具有非平稳、高噪声、肥尾与对抗博弈属性。机器学习与大模型只能在严格的数据、验证、执行和风险边界内生成可用证据。" />
+      <SectionHeading number="05" kicker="RESEARCH DISCIPLINE" title="面向非平稳市场的五层研究约束" text="金融市场同时具有高噪声、肥尾、交易摩擦与对抗博弈属性。模型结论必须置于数据因果、样本外验证、执行可行性和组合风险的共同约束下。" />
       <motion.div className="market-reality" initial={false} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <div className="reality-statement">
           <span className="mini-kicker">PRIOR ASSUMPTION / 市场先验</span>
-          <h3>模型不是答案，<em>而是约束条件下的证据生成器。</em></h3>
+          <h3>所有模型结论均应同时满足<em>信息可得性、样本外有效性与交易可执行性。</em></h3>
         </div>
         <div className="reality-tags" aria-label="金融市场底层约束">
           {['非平稳', '高噪声', '肥尾分布', '交易摩擦', '信息边界', '对抗博弈'].map((label, index) => <span key={label}><i className="mono">0{index + 1}</i>{label}</span>)}
@@ -707,7 +707,7 @@ function MethodSection() {
                   </motion.div>
                 ))}
               </div>
-              <div className="discipline-guard"><ShieldCheck size={17} /><span>系统硬约束</span><strong>{active.guardrail}</strong></div>
+              <div className="discipline-guard"><ShieldCheck size={17} /><span>约束判定规则</span><strong>{active.guardrail}</strong></div>
             </motion.div>
           </AnimatePresence>
         </div>

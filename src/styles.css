@@ -269,10 +269,10 @@ main { position: relative; z-index: 2; }
 .factor-item em { font-family: var(--mono); font-style: normal; font-size: 9px; }
 .factor-bar { height: 3px; border-radius: 9px; background: rgba(255,255,255,.04); margin-top: 6px; overflow: hidden; }
 .factor-bar i { height: 100%; display: block; background: linear-gradient(90deg, #4f7f6c, var(--mint)); border-radius: inherit; }
-.audit-note { display: flex; align-items: flex-start; gap: 9px; margin-top: 18px; padding: 11px; border-radius: 11px; color: #839089; background: rgba(126,231,198,.04); border: 1px solid rgba(126,231,198,.08); }
+.audit-note { display: flex; align-items: flex-start; gap: 12px; margin-top: 20px; padding: 15px 16px; border-radius: 14px; color: #98a59e; background: rgba(126,231,198,.04); border: 1px solid rgba(126,231,198,.1); }
 .audit-note svg { color: var(--mint); flex: 0 0 auto; margin-top: 1px; }
-.audit-note p { font-size: 9px; line-height: 1.55; margin: 0; }
-.audit-note strong { color: #aab5af; display: block; }
+.audit-note p { font-size: 9px; line-height: 1.7; margin: 0; }
+.audit-note strong { color: #c0cbc5; display: block; margin-bottom: 3px; }
 
 .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
 .metric-card { position: relative; min-height: 142px; padding: 17px; border: 1px solid var(--line); border-radius: 17px; background: rgba(13,26,21,.75); overflow: hidden; }
@@ -429,28 +429,44 @@ footer { border-top: 1px solid var(--line); padding: 45px max(28px, calc((100vw 
 .eyebrow, .section-kicker, .mini-kicker { font-size: 12px; }
 .hero-copy > p { color: #b0bbb5; font-size: 16px; }
 .trust-row { color: #8d9a94; font-size: 12px; }
-.signal-topline, .pulse-label { font-size: 10px; }
-.signal-footer { color: #99a69f; font-size: 11px; }
-.ticker-item { font-size: 11px; }
+.signal-topline, .pulse-label { font-size: 11px; }
+.signal-footer { color: #aab5af; font-size: 12px; }
+.ticker-item { font-size: 12px; }
+.section-number { font-size: 11px; }
 .section-heading p { color: #a4b0aa; font-size: 15px; }
 .asset-line strong { font-size: 15px; }
-.asset-line small, .chart-legend, .chart-caption { font-size: 11px; }
+.asset-line small, .chart-legend, .chart-caption { font-size: 12px; }
+.stock-tabs button small, .stock-tabs button em, .stock-name-line span, .stock-identity p { font-size: 11px; }
+.real-data-banner, .stock-stats span { font-size: 12px; }
+.year-range small, .score-ring small { font-size: 10px; }
+.range-tabs button, .view-toggle button, .chart-tooltip > span, .chart-tooltip > div { font-size: 11px; }
 .panel-title-row h3, .sentiment-gauge h3 { font-size: 20px; }
-.factor-score > div:last-child span, .factor-score > div:last-child small, .factor-item > div:first-child { font-size: 11px; }
-.factor-item em, .audit-note p { font-size: 10px; }
+.factor-score > div:last-child span, .factor-score > div:last-child small, .factor-item > div:first-child { font-size: 12px; }
+.factor-item em { font-size: 11px; }
+.audit-note p { font-size: 13px; }
+.audit-note strong { font-size: 13px; }
 .metric-card > span { font-size: 12px; }
 .metric-card > strong { font-size: 23px; }
-.metric-card > small, .risk-gate small, .source-note { font-size: 10px; }
-.sentiment-dist span, .tag-row span { font-size: 9px; }
-.news-meta { font-size: 10px; }
-.news-item strong { color: #dce4e0; font-size: 13px; }
-.news-detail p, .news-detail > div, .news-detail a { font-size: 11px; }
-.backtest-head p, .result-row > span, .result-row > small, .honesty-bar p { font-size: 11px; }
+.metric-card > small, .risk-gate small, .source-note { font-size: 11px; }
+.risk-gate strong { font-size: 12px; }
+.sentiment-dist span, .tag-row span { font-size: 10px; }
+.news-meta, .score-badge { font-size: 11px; }
+.news-item strong { color: #dce4e0; font-size: 14px; }
+.news-detail p, .news-detail > div, .news-detail a { font-size: 12px; }
+.backtest-head p, .result-row > span, .result-row > small, .honesty-bar p { font-size: 12px; }
 .scenario-buttons button, .cost-control > div:first-child, .scenario-summary > p { font-size: 12px; }
-.scenario-summary > span { font-size: 10px; }
-.scenario-values small, .method-tags span, .method-bottom p, .secondary-button { font-size: 10px; }
-.footer-main > p, .footer-links a { font-size: 11px; }
-.disclaimer p, .disclaimer span { font-size: 10px; }
+.scenario-summary > span { font-size: 11px; }
+.scenario-values small, .method-tags span, .method-bottom p, .secondary-button { font-size: 11px; }
+.range-label { font-size: 10px !important; }
+.reality-tags span { font-size: 12px; }
+.reality-tags i, .discipline-label small { font-size: 10px; }
+.discipline-code, .discipline-checks .check-index { font-size: 11px; }
+.discipline-label strong { font-size: 14px; }
+.discipline-checks strong { font-size: 13px; }
+.discipline-checks p { color: #929f98; font-size: 12px; }
+.discipline-guard, .discipline-guard strong { font-size: 11px; }
+.footer-main > p, .footer-links a { font-size: 12px; }
+.disclaimer p, .disclaimer span { font-size: 11px; }
 
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 @keyframes orbit { to { transform: rotate(360deg); } }
@@ -526,7 +542,7 @@ footer { border-top: 1px solid var(--line); padding: 45px max(28px, calc((100vw 
   .hero, .section { width: calc(100% - 28px); }
   .hero { min-height: 0; padding-top: 55px; }
   .hero h1 { font-size: 48px; }
-  .hero-copy > p { font-size: 13px; }
+  .hero-copy > p { font-size: 14px; }
   .desktop-only { display: none; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 16px; }
   .trust-row { flex-wrap: wrap; gap: 10px 16px; }
@@ -536,7 +552,7 @@ footer { border-top: 1px solid var(--line); padding: 45px max(28px, calc((100vw 
   .signal-stats { grid-template-columns: 1fr; }
   .section-heading { grid-template-columns: 32px 1fr; gap: 8px; }
   .section-heading h2 { font-size: 31px; }
-  .section-heading p { font-size: 11px; }
+  .section-heading p { font-size: 13px; }
   .stock-workbench { padding-inline: 14px; }
   .stock-tabs { grid-template-columns: repeat(2, 1fr); margin-inline: -14px; padding-inline: 7px; }
   .stock-tabs button { min-height: 58px; }
@@ -566,7 +582,7 @@ footer { border-top: 1px solid var(--line); padding: 45px max(28px, calc((100vw 
   .sentiment-scale { display: flex; }
   .news-panel { padding: 18px; }
   .news-item { padding-inline: 2px; }
-  .news-item strong { font-size: 12px; }
+  .news-item strong { font-size: 13px; }
   .news-detail p { margin-right: 0; padding-bottom: 20px; }
   .backtest-card { padding: 17px; }
   .backtest-head { align-items: flex-start; flex-direction: column; gap: 14px; }
