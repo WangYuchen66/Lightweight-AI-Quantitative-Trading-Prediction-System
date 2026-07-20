@@ -120,6 +120,7 @@ main { position: relative; z-index: 2; }
 .eyebrow span { width: 27px; height: 27px; display: grid; place-items: center; color: var(--acid); border: 1px solid rgba(211,255,105,.18); border-radius: 8px; }
 .hero h1 { font-size: clamp(54px, 6vw, 82px); line-height: 1.06; letter-spacing: -.065em; font-weight: 500; margin: 28px 0 24px; }
 .hero h1 span { color: var(--acid); }
+.hero h1.single-line-title { white-space: nowrap; font-size: clamp(36px, 4.6vw, 64px); letter-spacing: -.07em; }
 .hero-copy > p { color: #98a49e; line-height: 1.9; font-size: 15px; margin: 0; }
 .hero-actions { display: flex; align-items: center; gap: 27px; margin-top: 35px; }
 .primary-button, .secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; cursor: pointer; border-radius: 12px; font-weight: 650; transition: transform .2s ease, box-shadow .2s ease; }
